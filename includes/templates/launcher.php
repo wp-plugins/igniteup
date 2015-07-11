@@ -9,13 +9,14 @@ $cscs_templates['launcher'] = array(
             'type' => 'date',
             'label' => 'Launch Date',
             'placeholder' => 'mm/dd/yyyy',
-            'def' => date('m/d/Y H:i:s', strtotime('Next Monday')),
+            'def' => date('m/d/Y', strtotime('Next Monday')),
             'description' => 'Add the date when you are going to launch the site',
         ),
         'launch_time' => array(
             'type' => 'text',
             'label' => 'Launch Time',
             'placeholder' => 'hh:mm:ss',
+            'def' => '12:12:12',
             'description' => 'Note: Enter time in hh:mm:ss format.',
         ),
         'bg_color' => array(
@@ -23,14 +24,14 @@ $cscs_templates['launcher'] = array(
             'label' => 'Background Color',
             'def' => '#28BB9B',
             'placeholder' => '#28BB9B',
-            'description' => 'This will be the background color',
+            'description' => 'This will be the background color.',
         ),
         'bg_image' => array(
             'type' => 'image',
             'label' => 'Background Image',
             'def' => '',
             'placeholder' => '',
-            'description' => 'Page background image. (Recommended size: 1366px x 768px)',
+            'description' => 'Page background image. (Recommended size: 1920px x 1080px)',
         ),
         'font_color' => array(
             'type' => 'color-picker',

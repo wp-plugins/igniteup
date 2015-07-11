@@ -61,8 +61,9 @@ class CSComingSoonCreator {
         add_submenu_page('cscs_templates', 'Options', __('Options', CSCS_TEXT_DOMAIN), 'manage_options', 'cscs_options', array('CSAdminOptions', 'optionsPage'));
     }
 
-    public function loadThemeScripts(){
+    public function loadThemeScripts() {
         do_action('cscs_theme_scripts_' . CSCS_DEFAULT_TEMPLATE);
+        wp_enqueue_style('igniteup-front', plugin_dir_url(CSCS_FILE) . 'includes/css/front.css');
     }
 
     public function myThemeRedirect($original_template) {
@@ -237,4 +238,5 @@ class CSComingSoonCreator {
     public function load_languages() {
         load_plugin_textdomain(CSCS_TEXT_DOMAIN, false, dirname(plugin_basename(CSCS_FILE)) . '/localization/');
     }
+
 }

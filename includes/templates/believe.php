@@ -16,14 +16,14 @@ $options = array(
             'label' => 'Background Color',
             'def' => '#28BB9B',
             'placeholder' => '#28BB9B',
-            'description' => 'This will be the background color',
+            'description' => 'This will be the background color.',
         ),
         'bg_image' => array(
             'type' => 'image',
             'label' => 'Background Image',
             'def' => '',
             'placeholder' => '',
-            'description' => 'Page background image. (Recommended size: 1366px x 768px)',
+            'description' => 'Page background image. (Recommended size: 1920px x 1080px)',
         ),
         'font_color' => array(
             'type' => 'color-picker',

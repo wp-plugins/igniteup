@@ -4,7 +4,7 @@
         <title> <?php echo (!empty($the_cs_template_options["general_cs_page_title"]) ? $the_cs_template_options["general_cs_page_title"] : 'Almost Ready we are ready to launch.'); ?>  </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<?php wp_head(); ?>
+        <?php wp_head(); ?>
         <style>
             a{
                 color:<?php echo $the_cs_template_options['font_color']; ?>;
@@ -13,21 +13,24 @@
             a:hover{
                 color:<?php echo $the_cs_template_options['link_color']; ?>;
             }
-			<?php if(!empty($the_cs_template_options['bg_image'])): ?>
-			body::after{
-				content: '';
-				background: url('<?php echo $the_cs_template_options['bg_image']; ?>');
-				opacity: 0.5;
-				top: 0px;
-				left: 0px;
-				bottom: 0px;
-				right: 0px;
-				position: absolute;
-				z-index: -1;
-			}
-			<?php endif; ?>
+            <?php if (!empty($the_cs_template_options['bg_image'])): ?>
+                body::after{
+                    content: '';
+                    background: url('<?php echo $the_cs_template_options['bg_image']; ?>');
+                    opacity: 0.5;
+                    top: 0px;
+                    left: 0px;
+                    bottom: 0px;
+                    right: 0px;
+                    position: absolute;
+                    z-index: -1;
+                }
+                body{
+                    background: #000 !important;
+                }
+            <?php endif; ?>
         </style>
-        
+
     </head>
     <body style="background: <?php echo $the_cs_template_options['bg_color']; ?> ; color:<?php echo $the_cs_template_options['font_color']; ?> ">
         <div class="container-fluid main-container">
@@ -53,8 +56,8 @@
                     $pinterest = $the_cs_template_options['social-pinterest'];
                     $gplus = $the_cs_template_options['social-gplus'];
                     $has_youtube = (isset($the_cs_template_options['social-youtube']) ? TRUE : FALSE);
-                    if($has_youtube)
-                    $youtube = $the_cs_template_options['social-youtube'];
+                    if ($has_youtube)
+                        $youtube = $the_cs_template_options['social-youtube'];
                     ?>
                     <div class="social">
                         <ul>
@@ -72,16 +75,16 @@
             </div>
             <div class="row">
                 <div class="col-sm-6 col-sm-offset-3">
-                    <?php $powered_by = $the_cs_template_options['general_powered_by'];
-                      if ($powered_by == 1){
-                          $class = "visible";
-                      }
-                      else{
-                           $class = "hidden";
-                      }
-                      ?> 
-                    <div class="<?php echo $class;?> text-center" id="powered-by">                        
-                      Powered by IgniteUp 
+                    <?php
+                    $powered_by = $the_cs_template_options['general_powered_by'];
+                    if ($powered_by == 1) {
+                        $class = "visible";
+                    } else {
+                        $class = "hidden";
+                    }
+                    ?> 
+                    <div class="<?php echo $class; ?> text-center" id="powered-by">                        
+                        Powered by IgniteUp 
                     </div>
                 </div>
             </div>

@@ -4,16 +4,37 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: coming soon, coming soon page, construction, landing page, launch, launch page, maintenance, maintenance mode, newsletter, subscribe, offline, unavailable, under construction, wordpress coming soon, wordpress maintenance mode, wordpress under construction, igniter
 Requires at least: 3.0.1
 Tested up to: 4.2.2
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Display Coming Soon Page, Under Construction & Maintenance Mode templates on WordPress.
+Display Coming Soon, Under Constructions & Maintenance Mode pages for your site visitors.
 
 == Description ==
 
-Show site down time messages like "Coming Soon", "Under Construction" with included stunning templates or one by your own. We've made easy for you to create templates just with a folder of template files and a description file written in PHP.
+Create decent pages to let users know the site is in Coming Soon, Maintenance Mode or Under Construction mode. IgniteUp comes with simple but more customizable templates. You can change everything in the theme according to your needs.
 
+= Live Demo Pages = 
+
+* [Live Demo 1 &raquo;](http://plugins.ceylonsystems.com/igniteup-demo-1/)
+* [Live Demo 2 &raquo;](http://plugins.ceylonsystems.com/igniteup-demo-2/)
+* [Live Demo 3 &raquo;](http://plugins.ceylonsystems.com/igniteup-demo-3/)
+* [Live Demo 4 &raquo;](http://plugins.ceylonsystems.com/igniteup-demo-4/)
+
+= Features =
+
+* Active Support for Your Questions 
+* Supporting almost every WordPress theme. Let us know if you found any conflicts
+* 100% Mobile Responsive
+* Fully Customizable Themes
+* Email Subscription Form Available in Launcher Template
+* Translation Ready
+* Multisite Support
+* More New Themes Coming Soon with Future Updates
+
+= Included Languages =
+
+* Sinhala (si_LK)
 
 == Installation ==
 
@@ -46,11 +67,16 @@ Activated template won't see roles ticked on "Skip Page For" option and in defau
 
 == Changelog ==
 
+= 1.0.2 =
+* Automatic force for black background-color when background image selected
+* Few performance improvements
+* Fixed known theme conflicts
+
 = 1.0.1 =
-* Fixed title not showing for empty values.
+* Fixed title not showing for empty values
 
 = 1.0 =
-* Initial Release.
+* Initial Release
 
 == About Us ==
 

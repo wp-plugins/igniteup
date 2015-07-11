@@ -24,6 +24,9 @@
                     position: absolute;
                     z-index: -1;
                 }
+                body{
+                    background: #000 !important;
+                }
             <?php endif; ?>
         </style>
     </head>
@@ -40,24 +43,24 @@
                     <div class="text-center text-uppercase sub-text">
                         <?php echo $the_cs_template_options['title']; ?>
                     </div>
-					<?php if (!empty($the_cs_template_options['launch_date']) || !empty($the_cs_template_options['launch_time'])): ?>
-                    <div class="container-fluid" id="countdown">
-                        <div class="row text-uppercase">
-                            <div class="col-sm-3 countdown-time">
-                                <span id="days" class="time">00</span><span class="time-name">d<span class="hidden-sm">ay<span id="day-s">s</span></span></span>
-                            </div>
-                            <div class="col-sm-3 countdown-time">
-                                <span id="hrs" class="time">00</span><span class="time-name">h<span class="hidden-sm">our<span id="hrs-s">s</span></span></span>
-                            </div>
-                            <div class="col-sm-3 countdown-time">
-                                <span id="mins" class="time">00</span><span class="time-name">m<span class="hidden-sm">in<span id="min-s">s</span></span></span>
-                            </div>
-                            <div class="col-sm-3 countdown-time">
-                                <span id="secs" class="time">00</span><span class="time-name">s<span class="hidden-sm">ec<span id="sec-s">s</span></span></span>
+                    <?php if (!empty($the_cs_template_options['launch_date']) || !empty($the_cs_template_options['launch_time'])): ?>
+                        <div class="container-fluid" id="countdown">
+                            <div class="row text-uppercase">
+                                <div class="col-sm-3 countdown-time">
+                                    <span id="days" class="time">00</span><span class="time-name">d<span class="hidden-sm">ay<span id="day-s">s</span></span></span>
+                                </div>
+                                <div class="col-sm-3 countdown-time">
+                                    <span id="hrs" class="time">00</span><span class="time-name">h<span class="hidden-sm">our<span id="hrs-s">s</span></span></span>
+                                </div>
+                                <div class="col-sm-3 countdown-time">
+                                    <span id="mins" class="time">00</span><span class="time-name">m<span class="hidden-sm">in<span id="min-s">s</span></span></span>
+                                </div>
+                                <div class="col-sm-3 countdown-time">
+                                    <span id="secs" class="time">00</span><span class="time-name">s<span class="hidden-sm">ec<span id="sec-s">s</span></span></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-					<?php endif; ?>
+                    <?php endif; ?>
                     <p class="text-center">
                         <?php echo $the_cs_template_options['paragraph']; ?>
                     </p>
@@ -135,74 +138,74 @@
         </div>
         <script type="text/javascript">
 
-                $countdown = "<?php
-    echo $the_cs_template_options['launch_date'];
-    echo ' ';
-    echo $the_cs_template_options['launch_time'];
-    ?>";
-                jQuery("#secs").countdown($countdown, function (event) {
-                    jQuery(this).text(event.strftime('%S'));
-                    checkSeconds(jQuery(this).text());
+            $countdown = "<?php
+                            echo $the_cs_template_options['launch_date'];
+                            echo ' ';
+                            echo $the_cs_template_options['launch_time'];
+                            ?>";
+            jQuery("#secs").countdown($countdown, function (event) {
+                jQuery(this).text(event.strftime('%S'));
+                checkSeconds(jQuery(this).text());
 
 
-                });
-                jQuery("#mins")
-                        .countdown($countdown, function (event) {
-                            jQuery(this).text(
-                                    event.strftime('%M')
-                                    );
-                            checkMins(jQuery(this).text());
-                        });
-                jQuery("#hrs")
-                        .countdown($countdown, function (event) {
-                            jQuery(this).text(
-                                    event.strftime('%H')
-                                    );
-                            checkHours(jQuery(this).text());
-                        });
-                jQuery("#days")
-                        .countdown($countdown, function (event) {
-                            jQuery(this).text(
-                                    event.strftime('%D')
-                                    );
-                            checkDays(jQuery(this).text());
-                        });
+            });
+            jQuery("#mins")
+                    .countdown($countdown, function (event) {
+                        jQuery(this).text(
+                                event.strftime('%M')
+                                );
+                        checkMins(jQuery(this).text());
+                    });
+            jQuery("#hrs")
+                    .countdown($countdown, function (event) {
+                        jQuery(this).text(
+                                event.strftime('%H')
+                                );
+                        checkHours(jQuery(this).text());
+                    });
+            jQuery("#days")
+                    .countdown($countdown, function (event) {
+                        jQuery(this).text(
+                                event.strftime('%D')
+                                );
+                        checkDays(jQuery(this).text());
+                    });
 
-                function checkSeconds(sec) {
-                    if (sec === '01') {
-                        jQuery("#sec-s").addClass('hidden');
-                    }
-                    else {
-                        jQuery("#sec-s").removeClass('hidden');
-                    }
+            function checkSeconds(sec) {
+                if (sec === '01') {
+                    jQuery("#sec-s").addClass('hidden');
                 }
+                else {
+                    jQuery("#sec-s").removeClass('hidden');
+                }
+            }
 
-                function checkMins(min) {
-                    if (min === '01') {
-                        jQuery("#min-s").addClass('hidden');
-                    }
-                    else {
-                        jQuery("#min-s").removeClass('hidden');
-                    }
+            function checkMins(min) {
+                if (min === '01') {
+                    jQuery("#min-s").addClass('hidden');
                 }
-                function checkHours(hrs) {
-                    if (hrs === '01') {
-                        jQuery("#hrs-s").addClass('hidden');
-                    }
-                    else {
-                        jQuery("#hrs-s").removeClass('hidden');
-                    }
+                else {
+                    jQuery("#min-s").removeClass('hidden');
                 }
-                function checkDays(days) {
-                    if (days === '01') {
-                        jQuery("#day-s").addClass('hidden');
-                    }
-                    else {
-                        jQuery("#day-s").removeClass('hidden');
-                    }
+            }
+            function checkHours(hrs) {
+                if (hrs === '01') {
+                    jQuery("#hrs-s").addClass('hidden');
                 }
-                jQuery(document).ready(function () {
-					<?php if (!empty($the_cs_template_options['launch_date']) || !empty($the_cs_template_options['launch_time'])): ?>
+                else {
+                    jQuery("#hrs-s").removeClass('hidden');
+                }
+            }
+            function checkDays(days) {
+                if (days === '01') {
+                    jQuery("#day-s").addClass('hidden');
+                }
+                else {
+                    jQuery("#day-s").removeClass('hidden');
+                }
+            }
+            jQuery(document).ready(function () {
+<?php if (!empty($the_cs_template_options['launch_date']) || !empty($the_cs_template_options['launch_time'])): ?>
                     jQuery('#secs').countdown($countdown).on('finish.countdown', function () {
                         jQuery('#countdown').hide();
                         jQuery(".main-container").css('margin-top', '120px');
@@ -214,17 +217,17 @@
                             jQuery('#rocket').addClass('bounceInUp');
                         }, 3000);
                     });
-					<?php endif; ?>
-                });
+<?php endif; ?>
+            });
 
-                jQuery('.subscribe-btn').on('click', function () {
+            jQuery('.subscribe-btn').on('click', function () {
+                subscribe();
+            });
+            jQuery('#cs_email').on('keypress', function (e) {
+                if (e.which == 13) {
                     subscribe();
-                });
-                jQuery('#cs_email').on('keypress', function (e) {
-                    if (e.which == 13) {
-                        subscribe();
-                    }
-                });
+                }
+            });
 
             function subscribe() {
                 jQuery.ajax({
