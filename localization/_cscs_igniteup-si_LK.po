@@ -1,0 +1,159 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: IgniteUp\n"
+"POT-Creation-Date: 2015-07-09 15:46+0530\n"
+"PO-Revision-Date: 2015-07-09 15:47+0530\n"
+"Last-Translator: Thambaru Wijesekara <thambaru@gmail.com>\n"
+"Language-Team: CeylonSystems <info@ceylonsystems.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: includes\n"
+
+#: includes/class-coming-soon-creator.php:57
+msgid "CS Coming Soon"
+msgstr "CS Coming Soon"
+
+#: includes/class-coming-soon-creator.php:57
+msgid "IgniteUp"
+msgstr "IgniteUp"
+
+#: includes/class-coming-soon-creator.php:58
+#: includes/views/admin-templates.php:35
+msgid "Templates"
+msgstr "තේමා"
+
+#: includes/class-coming-soon-creator.php:59
+#: includes/views/admin-subscribers.php:6
+msgid "Subscribers"
+msgstr "දායකත්වයන්"
+
+#: includes/class-coming-soon-creator.php:60
+msgid "Options"
+msgstr "සැකසුම්"
+
+#: includes/views/admin-dashboard.php:9
+msgid "Settings saved."
+msgstr "වෙනස්කම් සුරැකිණි."
+
+#: includes/views/admin-dashboard.php:16
+msgid "General"
+msgstr "ප්‍රධාන"
+
+#: includes/views/admin-dashboard.php:17 includes/views/admin-dashboard.php:26
+msgid "Template Options"
+msgstr "තේමා සැකසුම්"
+
+#: includes/views/admin-dashboard.php:23
+msgid "General Options"
+msgstr "ප්‍රධාන සැකසුම්"
+
+#: includes/views/admin-subscribers.php:7
+msgid "List of subscribers you've got through the Coming Soon page."
+msgstr "අඩවිය හරහා ඊමේල් දායකත්වය ලබාගත් අයගේ ලැයිස්තුව."
+
+#: includes/views/admin-subscribers.php:13
+msgid "Bulk Actions"
+msgstr "බහුපෙළ ක්‍රියා"
+
+#: includes/views/admin-subscribers.php:14
+msgid "Move to Trash"
+msgstr "ඉවතලන්න"
+
+#: includes/views/admin-subscribers.php:16
+msgid "Apply"
+msgstr "යොදන්න"
+
+#: includes/views/admin-subscribers.php:19
+msgid "EXPORT CSV"
+msgstr "CSV නිර්යාතනය"
+
+#: includes/views/admin-subscribers.php:20
+msgid "EXPORT BCC"
+msgstr "BCC නිර්යාතනය"
+
+#: includes/views/admin-subscribers.php:30
+#: includes/views/admin-subscribers.php:50
+msgid "Name"
+msgstr "නම"
+
+#: includes/views/admin-subscribers.php:31
+#: includes/views/admin-subscribers.php:51
+msgid "Email Address"
+msgstr "ඊතැපැල් ලිපිනය"
+
+#: includes/views/admin-subscribers.php:40
+msgid "UNKNOWN"
+msgstr "නොදන්නා"
+
+#: includes/views/admin-subscribers.php:42
+msgid "Remove"
+msgstr "ඉවත් කරන්න"
+
+#: includes/views/admin-templates.php:12
+msgid "Customize"
+msgstr "අභිරුචිකරණය"
+
+#: includes/views/admin-templates.php:17
+msgid "Activate"
+msgstr "සබල කරන්න"
+
+#: includes/views/admin-templates.php:25
+msgid "Uninstall"
+msgstr "අස්ථාපනය"
+
+#: includes/views/admin-templates.php:37
+msgid "A new template activated!"
+msgstr "නව තේමාවක් සබල විණි!"
+
+#: includes/views/admin-templates.php:37
+msgid "Customize it"
+msgstr "අභිරුචි කරන්න"
+
+#: includes/views/temp-general-options.php:15
+msgid "Enable / Disable"
+msgstr "සබල / අබල"
+
+#: includes/views/temp-general-options.php:18
+msgid "Enable Coming Soon or Site Offline"
+msgstr "Coming Soon ‍හෝ Site Offline සබල කරන්න"
+
+#: includes/views/temp-general-options.php:22
+msgid "Skip Page For"
+msgstr "මොවුන්ට පිටුව මගහරින්න"
+
+#: includes/views/temp-general-options.php:28
+msgid "Administrators"
+msgstr "පරිපාලකවරු"
+
+#: includes/views/temp-general-options.php:30
+msgid "Editors"
+msgstr "සංස්කාරකවරු"
+
+#: includes/views/temp-general-options.php:35
+msgid "Page Title"
+msgstr "පිටු ශීර්ෂය"
+
+#: includes/views/temp-general-options.php:38
+msgid "This will be the title of the coming soon page."
+msgstr "මෙය ඔබේ coming soon පිටුවේ ශීර්ෂය වනු ඇත."
+
+#: includes/views/temp-general-options.php:42
+msgid "Powered by IgniteUp"
+msgstr "ප්ලගිනයට සහාය"
+
+#: includes/views/temp-general-options.php:44
+msgid "Show \"Powered by IgniteUp\" in the page"
+msgstr "පිටුවේ \"Powered by IgniteUp\" ලෙස පෙන්වන්න"
+
+#: includes/views/temp-template-options.php:14
+msgid "Something is wrong with your template"
+msgstr "ඔබේ තේමාවේ කිසියම් වරදක් වෙයි."
+
+#: includes/views/temp-template-options.php:69
+msgid "No options defined for the active template!"
+msgstr "සබල කළ තේමාව සඳහා කිසිදු සැකසුම් නැත!"

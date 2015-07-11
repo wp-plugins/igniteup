@@ -1,0 +1,159 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: IgniteUp\n"
+"POT-Creation-Date: 2015-07-09 15:47+0530\n"
+"PO-Revision-Date: 2015-07-09 15:47+0530\n"
+"Last-Translator: Thambaru Wijesekara <thambaru@gmail.com>\n"
+"Language-Team: CeylonSystems <info@ceylonsystems.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: includes\n"
+
+#: includes/class-coming-soon-creator.php:57
+msgid "CS Coming Soon"
+msgstr ""
+
+#: includes/class-coming-soon-creator.php:57
+msgid "IgniteUp"
+msgstr ""
+
+#: includes/class-coming-soon-creator.php:58
+#: includes/views/admin-templates.php:35
+msgid "Templates"
+msgstr ""
+
+#: includes/class-coming-soon-creator.php:59
+#: includes/views/admin-subscribers.php:6
+msgid "Subscribers"
+msgstr ""
+
+#: includes/class-coming-soon-creator.php:60
+msgid "Options"
+msgstr ""
+
+#: includes/views/admin-dashboard.php:9
+msgid "Settings saved."
+msgstr ""
+
+#: includes/views/admin-dashboard.php:16
+msgid "General"
+msgstr ""
+
+#: includes/views/admin-dashboard.php:17 includes/views/admin-dashboard.php:26
+msgid "Template Options"
+msgstr ""
+
+#: includes/views/admin-dashboard.php:23
+msgid "General Options"
+msgstr ""
+
+#: includes/views/admin-subscribers.php:7
+msgid "List of subscribers you've got through the Coming Soon page."
+msgstr ""
+
+#: includes/views/admin-subscribers.php:13
+msgid "Bulk Actions"
+msgstr ""
+
+#: includes/views/admin-subscribers.php:14
+msgid "Move to Trash"
+msgstr ""
+
+#: includes/views/admin-subscribers.php:16
+msgid "Apply"
+msgstr ""
+
+#: includes/views/admin-subscribers.php:19
+msgid "EXPORT CSV"
+msgstr ""
+
+#: includes/views/admin-subscribers.php:20
+msgid "EXPORT BCC"
+msgstr ""
+
+#: includes/views/admin-subscribers.php:30
+#: includes/views/admin-subscribers.php:50
+msgid "Name"
+msgstr ""
+
+#: includes/views/admin-subscribers.php:31
+#: includes/views/admin-subscribers.php:51
+msgid "Email Address"
+msgstr ""
+
+#: includes/views/admin-subscribers.php:40
+msgid "UNKNOWN"
+msgstr ""
+
+#: includes/views/admin-subscribers.php:42
+msgid "Remove"
+msgstr ""
+
+#: includes/views/admin-templates.php:12
+msgid "Customize"
+msgstr ""
+
+#: includes/views/admin-templates.php:17
+msgid "Activate"
+msgstr ""
+
+#: includes/views/admin-templates.php:25
+msgid "Uninstall"
+msgstr ""
+
+#: includes/views/admin-templates.php:37
+msgid "A new template activated!"
+msgstr ""
+
+#: includes/views/admin-templates.php:37
+msgid "Customize it"
+msgstr ""
+
+#: includes/views/temp-general-options.php:15
+msgid "Enable / Disable"
+msgstr ""
+
+#: includes/views/temp-general-options.php:18
+msgid "Enable Coming Soon or Site Offline"
+msgstr ""
+
+#: includes/views/temp-general-options.php:22
+msgid "Skip Page For"
+msgstr ""
+
+#: includes/views/temp-general-options.php:28
+msgid "Administrators"
+msgstr ""
+
+#: includes/views/temp-general-options.php:30
+msgid "Editors"
+msgstr ""
+
+#: includes/views/temp-general-options.php:35
+msgid "Page Title"
+msgstr ""
+
+#: includes/views/temp-general-options.php:38
+msgid "This will be the title of the coming soon page."
+msgstr ""
+
+#: includes/views/temp-general-options.php:42
+msgid "Powered by IgniteUp"
+msgstr ""
+
+#: includes/views/temp-general-options.php:44
+msgid "Show \"Powered by IgniteUp\" in the page"
+msgstr ""
+
+#: includes/views/temp-template-options.php:14
+msgid "Something is wrong with your template"
+msgstr ""
+
+#: includes/views/temp-template-options.php:69
+msgid "No options defined for the active template!"
+msgstr ""
