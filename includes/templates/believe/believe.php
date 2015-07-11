@@ -1,7 +1,7 @@
 <?php global $the_cs_template_options; ?>
 <html>
     <head>
-        <title> <?php echo (isset($the_cs_template_options["general_cs_page_title"]) ? $the_cs_template_options["general_cs_page_title"] : 'Almost Ready we are ready to launch.'); ?>  </title>
+        <title> <?php echo (!empty($the_cs_template_options["general_cs_page_title"]) ? $the_cs_template_options["general_cs_page_title"] : 'Almost Ready we are ready to launch.'); ?>  </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<?php wp_head(); ?>

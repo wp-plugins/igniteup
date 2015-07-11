@@ -2,7 +2,7 @@
 <html>
     <head>
         <?php wp_head(); ?>
-        <title> <?php echo (isset($the_cs_template_options["general_cs_page_title"]) ? $the_cs_template_options["general_cs_page_title"] : 'Almost Ready we are ready to launch.'); ?> </title>
+        <title> <?php echo (!empty($the_cs_template_options["general_cs_page_title"]) ? $the_cs_template_options["general_cs_page_title"] : 'Almost Ready we are ready to launch.'); ?> </title>
 
         <style>
             a{
