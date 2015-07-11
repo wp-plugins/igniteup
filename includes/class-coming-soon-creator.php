@@ -62,6 +62,11 @@ class CSComingSoonCreator {
     }
 
     public function loadThemeScripts() {
+        if (!$this->checkIfEnabled())
+            return;
+        if ($this->checkForSkipping())
+            return;
+
         do_action('cscs_theme_scripts_' . CSCS_DEFAULT_TEMPLATE);
         wp_enqueue_style('igniteup-front', plugin_dir_url(CSCS_FILE) . 'includes/css/front.css');
     }

@@ -4,7 +4,7 @@
   Plugin Name: IgniteUp
   Plugin URI: http://plugins.ceylonsystems.com
   Description: IgniteUp is a powerful plugin which allows you to keep your site on launchpad till ignite-up and to build amazing coming soon pages.
-  Version: 1.0.2
+  Version: 1.0.3
   Author: Ceylon Systems
   Author URI: http://ceylonsystems.com
   License: GPLv2 or later

@@ -35,7 +35,7 @@
     <body style="background: <?php echo $the_cs_template_options['bg_color']; ?> ; color:<?php echo $the_cs_template_options['font_color']; ?> ">
         <div class="container-fluid main-container">
             <div class="row">
-                <div class="col-sm-12 col-sm-8">
+                <div class="col-sm-8">
                     <div class='logo'><?php
                         $logo = $the_cs_template_options['logo'];
                         ?>

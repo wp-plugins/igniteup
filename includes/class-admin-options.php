@@ -55,7 +55,7 @@ class CSAdminOptions {
     }
 
     public static function setDefaultOptions() {
-        add_option(CSCS_GENEROPTION_PREFIX . 'skipfor', json_encode(array('administrator')));
+        //add_option(CSCS_GENEROPTION_PREFIX . 'skipfor', json_encode(array('administrator')));
     }
 
 }
