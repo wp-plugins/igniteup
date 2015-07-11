@@ -46,6 +46,9 @@ Activated template won't see roles ticked on "Skip Page For" option and in defau
 
 == Changelog ==
 
+= 1.0.1 =
+* Fixed title not showing for empty values.
+
 = 1.0 =
 * Initial Release.
 
