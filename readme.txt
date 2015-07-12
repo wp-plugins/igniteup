@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: coming soon, coming soon page, construction, landing page, launch, launch page, maintenance, maintenance mode, newsletter, subscribe, offline, unavailable, under construction, wordpress coming soon, wordpress maintenance mode, wordpress under construction, igniter
 Requires at least: 3.0.1
 Tested up to: 4.2.2
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,6 +26,7 @@ Create decent pages to let users know the site is in Coming Soon, Maintenance Mo
 * Active Support for Your Questions 
 * Supporting almost every WordPress theme.
 * 100% Mobile Responsive
+* Powered by Twitter Bootstrap
 * Fully Customizable Templates
 * Email Subscription Form Available in Launcher Template
 * Export Email Subscriber List as a CSV or BCC Text
@@ -39,16 +40,28 @@ Create decent pages to let users know the site is in Coming Soon, Maintenance Mo
 
 == Installation ==
 
-= Install the plugin =
+= Automatic Installation =
 
-Upload the plugin to your blog / Or install from the WordPress plugin repository, Activate it.
+1. In the dashboard navigate to `Plugins > Add New`
+2. Search for `IgniteUp`
+3. Locate the `IgniteUp` by `Ceylon Systems` and click `Install Now`
+4. After installation, click on `Activate Plugin` to activate
 
-= Activating the page =
+= Manual Installation =
 
-Go to `IgniteUp > Options` and check the `Enable / Disable` option and click the `save` button. 
+1. Download the zip file using the `Download` button above in this page
+2. In the dashboard navigate to `Plugins > Add New`
+3. Click on `Upload Plugin`
+4. Click `Choose File` then select the zip file you downloaded
+5. Click `Install Now`, wait for the installation and click `Activate Plugin`
+
+= Enabling the Landing Page =
+
+1. In the dashboard, navigate to `IgniteUp > Options`
+2. Tick the checkbox for `Enable/Disable` option
+3. Save the setting by clicking the `Save` button. 
+
 1, 2, 3: You're done!
-
-Note : If you need to skip the page for Admins, just tick the `Administrators` checkbox in the `Skip Page For` option.
 
 == Frequently Asked Questions ==
 
@@ -58,19 +71,28 @@ Navigate to plugin's options page (`IgniteUp > Options`) and tick `Enable / Disa
 = How to switch templates? =
 Navigate to templates page (`IgniteUp > Templates`) and click on the `Activate` button in the appropriate template you want to activate. Active template is shown in the first place.
 
-= How to customize template options =
+= How to customize template options? =
 Navigate to `IgniteUp > Options` and click the tab `Template Options`. There you can find all the options for the activated template.
 
-= Why can't I see maintainance mode is activated? =
+= Why can't I see IgniteUp page? =
 
-Activated template won't see roles ticked on "Skip Page For" option and in default, admins won't see.
+Make sure the plugin is activated. And also you should enable the option `Enable/Disable` in the IgniteUp Options (`Ignite > Options`) page. Note: IgniteUp page won't be seen by users who are logged in and belongs to the user roles ticked on `Skip Page For` option.
+
+= How can I reach IgniteUp developers for help? =
+
+You can post your question / suggestion in the [IgniteUp forums](https://wordpress.org/support/plugin/igniteup). We will reach you as soon as possible. You can also email us via info[at]ceylonsystems[dot]com for any support requests.
 
 == Screenshots ==
 
-1. Coming Soon Page, on default options. (You can change everything as you need)
-2. Another template
+1. Believe template on default options
+2. Launcher template on default options
+3. Offline template with default options
+4. Believe template modified with background image
 
 == Changelog ==
+
+= 1.0.4 =
+* Improve template mobile responsiveness
 
 = 1.0.3 =
 * Remove skip for admin from default options
