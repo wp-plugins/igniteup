@@ -24,8 +24,9 @@
                     left: 0px;
                     bottom: 0px;
                     right: 0px;
-                    position: absolute;
-                    z-index: -1;
+                    position: fixed;
+                    z-index: -1;                    
+                    background-size:cover;
                 }
                 body{
                     background: #000 !important;

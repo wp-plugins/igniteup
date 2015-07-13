@@ -25,8 +25,9 @@
                     left: 0px;
                     bottom: 0px;
                     right: 0px;
-                    position: absolute;
+                    position: fixed;
                     z-index: -1;
+                    background-size:cover;
                 }
                 body{
                     background: #000 !important;
@@ -50,22 +51,22 @@
                     <?php if (!empty($the_cs_template_options['launch_date']) || !empty($the_cs_template_options['launch_time'])): ?>
                         <div class="container-fluid" id="countdown">
                             <div class="row text-uppercase">
-                                <div class="col-sm-3 countdown-time">
+                                <div class="col-sm-3 col-xs-6 countdown-time">
                                     <span id="days" class="time">00</span><span class="time-name">d<span class="hidden-sm">ay<span id="day-s">s</span></span></span>
                                 </div>
-                                <div class="col-sm-3 countdown-time">
+                                <div class="col-sm-3 col-xs-6 countdown-time">
                                     <span id="hrs" class="time">00</span><span class="time-name">h<span class="hidden-sm">our<span id="hrs-s">s</span></span></span>
                                 </div>
-                                <div class="col-sm-3 countdown-time">
+                                <div class="col-sm-3 col-xs-6 countdown-time">
                                     <span id="mins" class="time">00</span><span class="time-name">m<span class="hidden-sm">in<span id="min-s">s</span></span></span>
                                 </div>
-                                <div class="col-sm-3 countdown-time">
+                                <div class="col-sm-3 col-xs-6 countdown-time">
                                     <span id="secs" class="time">00</span><span class="time-name">s<span class="hidden-sm">ec<span id="sec-s">s</span></span></span>
                                 </div>
                             </div>
                         </div>
                     <?php endif; ?>
-                    <p class="text-center">
+                    <p class="text-center description">
                         <?php echo $the_cs_template_options['paragraph']; ?>
                     </p>
                     <div class="subscribe">

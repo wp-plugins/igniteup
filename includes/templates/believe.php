@@ -88,7 +88,7 @@ $cscs_templates['believe'] = $options;
 
 function cscs_belive_theme_scripts(){
     wp_enqueue_style('bootstrap', plugins_url('includes/css/bootstrap.min.css', CSCS_FILE));
-    wp_enqueue_style('believe', plugins_url('believe/css/newcss.css', __FILE__));
+    wp_enqueue_style('believe', plugins_url('believe/css/main.css', __FILE__));
 }
 
 add_action('cscs_theme_scripts_believe', 'cscs_belive_theme_scripts');

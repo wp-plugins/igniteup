@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: coming soon, coming soon page, construction, landing page, launch, launch page, maintenance, maintenance mode, newsletter, subscribe, offline, unavailable, under construction, wordpress coming soon, wordpress maintenance mode, wordpress under construction, igniter
 Requires at least: 3.0.1
 Tested up to: 4.2.2
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,7 +80,7 @@ Make sure the plugin is activated. And also you should enable the option `Enable
 
 = How can I reach IgniteUp developers for help? =
 
-You can post your question / suggestion in the [IgniteUp forums](https://wordpress.org/support/plugin/igniteup). We will reach you as soon as possible. You can also email us via info[at]ceylonsystems[dot]com for any support requests.
+You can post your question / suggestion in the [IgniteUp forums](https://wordpress.org/support/plugin/igniteup). We will reach you as soon as possible. You can also email us via support[at]ceylonsystems[dot]com for any support requests.
 
 == Screenshots ==
 
@@ -90,6 +90,10 @@ You can post your question / suggestion in the [IgniteUp forums](https://wordpre
 4. Believe template modified with background image
 
 == Changelog ==
+
+= 1.0.5 =
+* Fix mobile responsive issues
+* Fix few minor bugs
 
 = 1.0.4 =
 * Improve template mobile responsiveness

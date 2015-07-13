@@ -32,14 +32,32 @@ body{
 .contact{
     font-size: 19px;
 }
+#powered-by {
+    margin-top: 50px;
+    font-family: "Biryani";
+    font-weight: 300;
+    font-size: 12px;
+}
 @media(min-width:768px){
     .main-container{
         margin-top: 150px;
     }
 }
-#powered-by {
-  margin-top: 50px;
-  font-family: "Biryani";
-  font-weight: 300;
-  font-size: 12px;
+@media(max-width:768px){
+    .main-container{
+        margin-top: 50px;
+    }
+    .title-top {
+        font-size: 24pt;
+    }
+    .sub-text {
+        font-size: 12pt;
+        margin-top: 20px;
+    }
+    .contact {
+        font-size: 11pt;
+    }
+    .logo{
+        margin-bottom: 30px !important;
+    }
 }

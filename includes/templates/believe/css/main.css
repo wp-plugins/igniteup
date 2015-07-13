@@ -29,7 +29,6 @@ body{
     font-weight: bold;
     text-transform: uppercase;
     font-family: "Montserrat";
-
 }
 .paragraph{
     font-size:20pt ;
@@ -44,6 +43,7 @@ body{
 .social>ul{
     margin: 60px 10px 10px 0;
     padding:0;
+    display: inline-block;
 }
 .social-icon{
     transition: all ease 400ms;
@@ -51,6 +51,12 @@ body{
 }
 .social-icon:hover{
     margin-top:-10px;
+}
+#powered-by {
+    margin-top: 50px;
+    font-family: "Biryani";
+    font-weight: 300;
+    font-size: 12px;
 }
 @media(max-width:1050px){
     #plane{
@@ -62,9 +68,28 @@ body{
         right:1%;
     }
 }
-#powered-by {
-  margin-top: 50px;
-  font-family: "Biryani";
-  font-weight: 300;
-  font-size: 12px;
+@media(max-width:768px){
+    .title-top{
+        font-size: 16pt;
+        text-align: center;
+    }
+    .title-bottom{
+        font-size: 23pt;
+        margin-top: 17px;
+        text-align: center;
+    }
+    .paragraph {
+        font-size: 10pt;
+        margin: 30px 0;
+        text-align: center;
+    }
+    .logo{
+        text-align: center;
+    }
+    .social{
+        text-align: center;
+    }
+    .social>ul{
+        margin: 0;
+    }
 }

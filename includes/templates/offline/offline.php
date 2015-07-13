@@ -25,8 +25,9 @@
                     left: 0px;
                     bottom: 0px;
                     right: 0px;
-                    position: absolute;
-                    z-index: -1;
+                    position: fixed;
+                    z-index: -1;                    
+                    background-size:cover;
                 }
                 body{
                     background: #000 !important;
@@ -37,7 +38,8 @@
     <body style="background: <?php echo $the_cs_template_options['bg_color']; ?>; color:<?php echo $the_cs_template_options['font_color']; ?>;">
         <div class="container-fluid main-container">
             <div class="row">
-                <div class="col-sm-12 ">
+                <div class="col-xs-2 visible-xs"></div>
+                <div class="col-sm-12 col-xs-8">
                     <img class="img-responsive logo" src="<?php echo $the_cs_template_options['logo']; ?>">
                 </div>
             </div>
