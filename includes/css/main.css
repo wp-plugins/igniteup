@@ -1,0 +1,16 @@
+#cscs-templates{margin-top: 20px;}
+.template-box{width: 30.6%;float: left;position: relative;  margin: 0 4% 4% 0;}
+.template-box:nth-child(3n) {margin-right: 0;}
+.template-box img{width: 100%;}
+.template-box .template-title{position: absolute; top:0; left:0; right: 0;  background-color: rgba(0, 0, 0, 0.38); padding: 10px;color: #fff;font-size: 15px;}
+.template-box .template-footer{position: absolute; bottom:0; left:0; right: 0;  background-color: #23282d   ;padding: 10px;color: #fff;font-size: 15px;text-align: right;}
+.template-box .template-footer .button-customize, .template-box .template-footer .button-activate{float:right;}
+.template-box .template-footer .button-delete{float:left;}
+.template-box .template-footer form{display: inline;}
+.cscs_message{padding: 20px !important;   margin: 5px 0 15px;background: #fff;  border-left: 4px solid #7ad03a;  -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);  box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);}
+.cscs-nav{border-bottom: 1px solid #ccc;padding-bottom: 0;padding-left: 10px;}
+.cscs-nav-tabs{border: 1px solid #ccc;border-bottom: none;background: #e4e4e4;color: #555;display: inline-block;text-decoration: none;margin: -4px 4px -1px 0;padding: 6px 10px;font-weight: 700;font-size: 15px;line-height: 24px;}
+.cscs-nav-tabs:hover{background-color: #fff;color: #464646;}
+.cscs-nav-tabs.active, .cscs-nav-tabs.active:hover{border-bottom: 1px solid #f1f1f1;background: #f1f1f1;color: #000;}
+.clearfix{clear:both;}
+#toplevel_page_cscs_templates .wp-menu-image:before {font-family: "rockyton" !important;content: 'm' !important;}
