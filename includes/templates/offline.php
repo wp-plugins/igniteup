@@ -72,6 +72,8 @@ $cscs_templates['offline'] = array(
 
 function cscs_offline_theme_scripts() {
     wp_enqueue_style('bootstrap', plugins_url('includes/css/bootstrap.min.css', CSCS_FILE));
+    wp_enqueue_style('font-montserrat', plugins_url('includes/css/font-montserrat.css', CSCS_FILE));
+    wp_enqueue_style('font-biryani', plugins_url('includes/css/font-biryani.css', CSCS_FILE));
     wp_enqueue_style('offline', plugins_url('offline/css/main.css', __FILE__));
 }
 

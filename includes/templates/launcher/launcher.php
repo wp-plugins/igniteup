@@ -10,16 +10,16 @@
 
         <style>
             a{
-                color:<?php echo $the_cs_template_options['font_color']; ?>;
+                color:<?php echo $the_cs_template_options['font_color']; ?> !important;
                 transition: all ease 400ms;
             }
             a:hover{
-                color:<?php echo $the_cs_template_options['link_color']; ?>;
+                color:<?php echo $the_cs_template_options['link_color']; ?> !important;
             }
             <?php if (!empty($the_cs_template_options['bg_image'])): ?>
                 body::after{
                     content: '';
-                    background: url('<?php echo $the_cs_template_options['bg_image']; ?>');
+                    background: url('<?php echo $the_cs_template_options['bg_image']; ?>') !important;
                     opacity: 0.5;
                     top: 0px;
                     left: 0px;
@@ -38,7 +38,7 @@
     <body style="background: <?php echo $the_cs_template_options['bg_color']; ?>; color:<?php echo $the_cs_template_options['font_color']; ?>;">
         <div class="container-fluid main-container">
             <div class="row">
-                <div class="col-sm-3 ">
+                <div class="col-sm-3">
                     <img id="rocket" class="img-responsive" src="<?php echo plugins_url('img/rocket.png', __FILE__); ?>">
                 </div>
                 <div class="col-sm-9 ">
@@ -133,7 +133,7 @@
                             }
                             ?>
                             <div class="<?php echo $class; ?> text-center" id="powered-by">
-                                Powered by IgniteUp
+                                Powered by <a href="https://wordpress.org/plugins/igniteup/" target="_blank">IgniteUp</a>
                             </div>
                         </div>
                     </div>
@@ -261,7 +261,13 @@
                     }
                 });
             }
-
+            jQuery(function ($) {
+                $('#rocket').hover(function () {
+                    $(this).animate({'margin-top': "-=50"});
+                }, function () {
+                    $(this).animate({'margin-top': "180px"});
+                });
+            });
         </script>
         <?php wp_footer(); ?>
     </body>

@@ -7,7 +7,8 @@ class CSComingSoonCreator {
 
         add_action('admin_menu', array($this, 'setMenus'));
         add_action('admin_enqueue_scripts', array($this, 'loadAdminScripts'));
-        add_action('wp_enqueue_scripts', array($this, 'loadThemeScripts'), 100);
+        add_action('wp_enqueue_scripts', array($this, 'dequeScripts'), 599);
+        add_action('wp_enqueue_scripts', array($this, 'loadThemeScripts'), 600);
         add_action('admin_init', array('CSAdminOptions', 'registerOptions'));
         add_action('admin_init', array('CSAdminOptions', 'registerGeneralOptions'));
         add_action('admin_init', array($this, 'removeSubscribers'));
@@ -19,8 +20,8 @@ class CSComingSoonCreator {
         register_activation_hook(CSCS_FILE, array('CSAdminOptions', 'setDefaultOptions'));
         add_action('wp_ajax_nopriv_subscribe_email', array($this, 'subscribeEmail'));
         add_action('wp_ajax_subscribe_email', array($this, 'subscribeEmail'));
-        add_action('init', array($this, 'createCsvFile'));
-        add_action('init', array($this, 'createBccFile'));
+        add_action('admin_init', array($this, 'createCsvFile'));
+        add_action('admin_init', array($this, 'createBccFile'));
         add_action('after_setup_theme', array($this, 'load_languages'));
         new CSComingSoonDbMigrations();
     }
@@ -69,6 +70,22 @@ class CSComingSoonCreator {
 
         do_action('cscs_theme_scripts_' . CSCS_DEFAULT_TEMPLATE);
         wp_enqueue_style('igniteup-front', plugin_dir_url(CSCS_FILE) . 'includes/css/front.css');
+    }
+
+    public function dequeScripts() {
+        if (!$this->checkIfEnabled())
+            return;
+        if ($this->checkForSkipping())
+            return;
+
+        $skip_scr = array('colors', 'wp-admin', 'login', 'install', 'wp-color-picker', 'customize-controls', 'customize-widgets', 'press-this', 'ie', 'admin-bar');
+        global $wp_styles;
+
+        foreach ($wp_styles->registered as $script) {
+            if (!in_array($script->handle, $skip_scr)) {
+                wp_dequeue_style($script->handle);
+            }
+        }
     }
 
     public function myThemeRedirect($original_template) {
@@ -195,36 +212,36 @@ class CSComingSoonCreator {
     }
 
     public function createCsvFile() {
-        if (isset($_GET['rockython_createcsv']) & isset($_GET['sub'])) {
-            global $wpdb;
-            $subs = $wpdb->get_results("SELECT * FROM " . CSCS_DBTABLE_PREFIX . CSCS_DBTABLE_SUBSCRIPTS);
-            $csv_array = array();
-            $csv_array[] = array('Name', 'Email');
+        if (!isset($_GET['rockython_createcsv']) || !isset($_GET['sub']))
+            return;
+        global $wpdb;
+        $subs = $wpdb->get_results("SELECT * FROM " . CSCS_DBTABLE_PREFIX . CSCS_DBTABLE_SUBSCRIPTS);
+        $csv_array = array();
+        $csv_array[] = array('Name', 'Email');
 
-            foreach ($subs as $sub):
-                $csv_array[] = array(!empty($sub->name) ? $sub->email : '', !empty($sub->email) ? $sub->email : '');
-            endforeach;
-            $this->convertToCsv($csv_array, 'rockython_email_subscribers.csv', ',');
-            exit();
-        }
+        foreach ($subs as $sub):
+            $csv_array[] = array(!empty($sub->name) ? $sub->email : '', !empty($sub->email) ? $sub->email : '');
+        endforeach;
+        $this->convertToCsv($csv_array, 'igniteup_subscribers_' . time() . '.csv', ',');
+        exit();
     }
 
     public function createBccFile() {
-        if (isset($_GET['rockython_createbcc']) & isset($_GET['sub'])) {
+        if (!isset($_GET['rockython_createbcc']) || !isset($_GET['sub']))
+            return;
 
-            $textTitle = 'rockithon_bcclist_site_subscribers' . time() . '.txt';
-            global $wpdb;
-            $subs = $wpdb->get_results("SELECT * FROM " . CSCS_DBTABLE_PREFIX . CSCS_DBTABLE_SUBSCRIPTS);
+        $textTitle = 'igniteup_subscribers_' . time() . '.txt';
+        global $wpdb;
+        $subs = $wpdb->get_results("SELECT * FROM " . CSCS_DBTABLE_PREFIX . CSCS_DBTABLE_SUBSCRIPTS);
 
-            $bccArray = array();
-            foreach ($subs as $reg):
-                $bccArray[] = $reg->name . ' <' . $reg->email . '>';
-            endforeach;
-            header('Content-type: text/plain; charset=utf-8');
-            header('Content-Disposition: attachement; filename="' . $textTitle . '";');
-            echo implode(", ", $bccArray);
-            exit();
-        }
+        $bccArray = array();
+        foreach ($subs as $reg):
+            $bccArray[] = $reg->name . ' <' . $reg->email . '>';
+        endforeach;
+        header('Content-type: text/plain; charset=utf-8');
+        header('Content-Disposition: attachement; filename="' . $textTitle . '";');
+        echo implode(", ", $bccArray);
+        exit();
     }
 
     public function removeSubscribers() {

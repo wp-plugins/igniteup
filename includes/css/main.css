@@ -14,3 +14,8 @@
 .cscs-nav-tabs.active, .cscs-nav-tabs.active:hover{border-bottom: 1px solid #f1f1f1;background: #f1f1f1;color: #000;}
 .clearfix{clear:both;}
 #toplevel_page_cscs_templates .wp-menu-image:before {font-family: "rockyton" !important;content: 'm' !important;}
+
+@media screen and (max-width:767px){
+    .template-box{width: 80%;position: relative;  margin: 0 auto 20px auto; float: inherit;}
+    .template-box:nth-child(3n) {margin-right: auto;}
+}

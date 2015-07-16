@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: coming soon, coming soon page, construction, landing page, launch, launch page, maintenance, maintenance mode, newsletter, subscribe, offline, unavailable, under construction, wordpress coming soon, wordpress maintenance mode, wordpress under construction, igniter
 Requires at least: 3.0.1
 Tested up to: 4.2.2
-Stable tag: 1.0.5
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,11 +20,12 @@ Create decent pages to let users know the site is in Coming Soon, Maintenance Mo
 * [Live Demo 2 &raquo;](http://plugins.ceylonsystems.com/igniteup-demo-2/)
 * [Live Demo 3 &raquo;](http://plugins.ceylonsystems.com/igniteup-demo-3/)
 * [Live Demo 4 &raquo;](http://plugins.ceylonsystems.com/igniteup-demo-4/)
+* [Live Demo 5 &raquo;](http://plugins.ceylonsystems.com/igniteup-demo-5/)
 
 = Features =
 
 * Active Support for Your Questions 
-* Supporting almost every WordPress theme.
+* Supporting every WordPress theme.
 * 100% Mobile Responsive
 * Powered by Twitter Bootstrap
 * Fully Customizable Templates
@@ -84,12 +85,18 @@ You can post your question / suggestion in the [IgniteUp forums](https://wordpre
 
 == Screenshots ==
 
-1. Believe template on default options
-2. Launcher template on default options
-3. Offline template with default options
-4. Believe template modified with background image
+1. Believe Template on Default Options
+2. Launcher Template on Default Options
+3. Offline Template on Default Options
+4. Glass Template on Default Options
+5. Believe Template Modified with Background Image
 
 == Changelog ==
+
+= 1.1 =
+* Add new template GLASS
+* Improved to dequeue other template stylesheets when page is enabled
+* Template page improved to be mobile responsive
 
 = 1.0.5 =
 * Fix mobile responsive issues

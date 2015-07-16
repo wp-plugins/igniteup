@@ -1,35 +1,26 @@
 <?php
-
 global $cscs_templates;
-$cscs_templates['launcher'] = array(
-    'name' => 'Launcher',
-    'folder_name' => 'launcher',
+$cscs_templates['glass'] = array(
+    'name' => 'Glass',
+    'folder_name' => 'glass',
     'options' => array(
-        'launch_date' => array(
-            'type' => 'date',
-            'label' => 'Launch Date',
-            'placeholder' => 'mm/dd/yyyy',
-            'def' => date('m/d/Y', strtotime('Next Monday')),
-            'description' => 'Add the date when you are going to launch the site',
-        ),
-        'launch_time' => array(
-            'type' => 'text',
-            'label' => 'Launch Time',
-            'placeholder' => 'hh:mm:ss',
-            'def' => '12:12:12',
-            'description' => 'Note: Enter time in hh:mm:ss format.',
+        'logo' => array(
+            'type' => 'image',
+            'label' => 'Logo (Transparent)',
+            'def' => plugins_url("glass/img/logo.png", __FILE__),
+            'description' => 'Recommended size: 250px x 90px',
         ),
         'bg_color' => array(
             'type' => 'color-picker',
             'label' => 'Background Color',
-            'def' => '#28BB9B',
+            'def' => '#303030',
             'placeholder' => '#28BB9B',
             'description' => 'This will be the background color.',
         ),
         'bg_image' => array(
             'type' => 'image',
             'label' => 'Background Image',
-            'def' => '',
+            'def' => plugins_url("glass/img/bg_default.jpg", __FILE__),
             'placeholder' => '',
             'description' => 'Page background image. (Recommended size: 1920px x 1080px)',
         ),
@@ -40,47 +31,26 @@ $cscs_templates['launcher'] = array(
             'placeholder' => '#FFFFFF',
             'description' => 'This will be the font color',
         ),
+        'link_color' => array(
+            'type' => 'color-picker',
+            'label' => 'Link Color',
+            'def' => '#cbcbcb',
+            'placeholder' => '#cbcbcb',
+            'description' => 'This will be the hover color',
+        ),
         'title_top' => array(
             'type' => 'text',
-            'label' => 'Title Top Text',
-            'def' => 'Almost Ready',
-            'placeholder' => 'Bold Title',
-            'description' => 'This will be the bold title',
-        ),
-        'title' => array(
-            'type' => 'text',
-            'label' => 'Subtitle Text',
-            'def' => 'Website will launch in',
-            'placeholder' => 'Subtitle',
-            'description' => 'Text below the title',
+            'label' => 'Title Top',
+            'def' => 'Under Maintenance',
+            'placeholder' => 'Header Text',
+            'description' => 'This will be the main title',
         ),
         'paragraph' => array(
             'type' => 'textarea',
             'label' => 'Paragraph Text',
-            'def' => 'This website is currently unavailable due to maintenance. Please visit again later. If you have any inquiries forward to the site admin. Please subscribe with our Newsletter.',
+            'def' => 'sorry for the inconvenience <br> we will come with a new experience.',
             'placeholder' => 'Paragraph Text',
-            'description' => 'This will be the paragraph text',
-        ),
-        'subscribe_text' => array(
-            'type' => 'text',
-            'label' => 'Button Text',
-            'def' => 'Subscribe',
-            'placeholder' => 'Subscribe',
-            'description' => 'Max: 15 Characters',
-        ),
-        'subscribe_text_color' => array(
-            'type' => 'color-picker',
-            'label' => 'Button Font Color',
-            'def' => '#fff',
-            'placeholder' => '#FFFFFF',
-            'description' => 'This will be the font color the button',
-        ),
-        'subscribe_bg_color' => array(
-            'type' => 'color-picker',
-            'label' => 'Button Background Color',
-            'def' => '#DB4F4B',
-            'placeholder' => '#FFFFFF',
-            'description' => 'This will be the background color the button',
+            'description' => 'This will be the paragraph text, you can use html tags here.',
         ),
         'social-twitter' => array(
             'type' => 'text',
@@ -117,11 +87,11 @@ $cscs_templates['launcher'] = array(
             'placeholder' => 'http://youtube.com/ceylonsystems',
             'description' => 'Enter the Youtube URL here',
         ),
-        'social-evernote' => array(
+        'social-instagram' => array(
             'type' => 'text',
-            'label' => 'Evernote',
+            'label' => 'Instagram',
             'def' => '',
-            'placeholder' => 'http://evernote.com/ceylonsystems',
+            'placeholder' => 'http://instagram.com/ceylonsystems',
             'description' => 'Enter the Evernote URL here',
         ),
         'social-tumblr' => array(
@@ -145,17 +115,16 @@ $cscs_templates['launcher'] = array(
             'placeholder' => 'http://linkedin.com/ceylonsystems',
             'description' => 'Enter the Linkedin URL here',
         ),
+        
     )
 );
 
-function cscs_launcher_theme_scripts(){
-  wp_enqueue_style('bootstrap', plugins_url('includes/css/bootstrap.min.css', CSCS_FILE));  
-  wp_enqueue_style('animate', plugins_url('includes/css/animate.css', CSCS_FILE));
-  wp_enqueue_style('font-montserrat', plugins_url('includes/css/font-montserrat.css', CSCS_FILE));
-  wp_enqueue_style('launcher', plugins_url('launcher/css/main.css', __FILE__));
-  wp_enqueue_style('launcher-icons', plugins_url('includes/css/icons/styles.css', CSCS_FILE));
-  wp_enqueue_script('jquery');
-  wp_enqueue_script('jquery-countdown', plugins_url('launcher/js/jquery.countdown.js', __FILE__),  array('jquery'));
+function cscs_glass_theme_scripts() {
+    wp_enqueue_style('bootstrap', plugins_url('includes/css/bootstrap.min.css', CSCS_FILE));
+    wp_enqueue_style('font-montserrat', plugins_url('includes/css/font-montserrat.css', CSCS_FILE));
+    wp_enqueue_style('igniteup-fontawesome', plugins_url('includes/css/font-awesome.min.css', CSCS_FILE));
+    wp_enqueue_style('font-opensans', plugins_url('includes/css/font-opensans.css', CSCS_FILE));
+    wp_enqueue_style('igniteup-glass', plugins_url('glass/css/main.css', __FILE__));
 }
 
-add_action('cscs_theme_scripts_launcher', 'cscs_launcher_theme_scripts');
+add_action('cscs_theme_scripts_glass', 'cscs_glass_theme_scripts');

@@ -10,11 +10,11 @@
 
         <style>
             a{
-                color:<?php echo $the_cs_template_options['font_color']; ?>;
+                color:<?php echo $the_cs_template_options['font_color']; ?> !important;
                 transition: all ease 400ms;
             }
             a:hover{
-                color:<?php echo $the_cs_template_options['link_color']; ?>;
+                color:<?php echo $the_cs_template_options['link_color']; ?> !important;
             }
             <?php if (!empty($the_cs_template_options['bg_image'])): ?>
                 body::after{
@@ -71,7 +71,7 @@
                     }
                     ?>
                     <div class="<?php echo $class; ?> text-center" id="powered-by">                        
-                        Powered by IgniteUp
+                        Powered by <a href="https://wordpress.org/plugins/igniteup/" target="_blank">IgniteUp</a>
                     </div>
                 </div>
             </div>

@@ -4,7 +4,7 @@ function createTemplateThumb($key, $template, $active = FALSE) {
     ?>
     <div class="template-box">
         <div class="template-title"><?php echo $template['name'], $active ? ' (Active)' : ''; ?></div>
-        <img src="<?php echo plugin_dir_url(CSCS_FILE) . 'includes/templates/' . $template['folder_name'] . '/screenshot.png'; ?>">
+        <img src="<?php echo plugin_dir_url(CSCS_FILE) . 'includes/templates/' . $template['folder_name'] . '/screenshot.jpg'; ?>">
         <div class="template-footer">
 
             <?php if (CSCS_DEFAULT_TEMPLATE == $key): ?>
