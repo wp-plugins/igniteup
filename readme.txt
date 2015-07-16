@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: coming soon, coming soon page, construction, landing page, launch, launch page, maintenance, maintenance mode, newsletter, subscribe, offline, unavailable, under construction, wordpress coming soon, wordpress maintenance mode, wordpress under construction, igniter
 Requires at least: 3.0.1
 Tested up to: 4.2.2
-Stable tag: 1.1
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -92,6 +92,9 @@ You can post your question / suggestion in the [IgniteUp forums](https://wordpre
 5. Believe Template Modified with Background Image
 
 == Changelog ==
+
+= 1.1.1 = 
+* Fix a bug occurred on network installations
 
 = 1.1 =
 * Add new template GLASS

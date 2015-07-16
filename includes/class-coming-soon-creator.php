@@ -80,9 +80,12 @@ class CSComingSoonCreator {
 
         $skip_scr = array('colors', 'wp-admin', 'login', 'install', 'wp-color-picker', 'customize-controls', 'customize-widgets', 'press-this', 'ie', 'admin-bar');
         global $wp_styles;
+        $registered_array = $wp_styles->registered;
+        if (!is_array($registered_array))
+            $registered_array = array();
 
-        foreach ($wp_styles->registered as $script) {
-            if (!in_array($script->handle, $skip_scr)) {
+        foreach ($registered_array as $script) {
+            if (isset($script->handle) && !in_array($script->handle, $skip_scr)) {
                 wp_dequeue_style($script->handle);
             }
         }
