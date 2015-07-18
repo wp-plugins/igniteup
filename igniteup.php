@@ -1,5 +1,4 @@
-<?php
-
+<?php 
 /*
   Plugin Name: IgniteUp
   Plugin URI: http://plugins.ceylonsystems.com

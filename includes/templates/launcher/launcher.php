@@ -142,7 +142,7 @@
 
         </div>
         <script type="text/javascript">
-
+            var count_completed = false;
             $countdown = "<?php
                             echo $the_cs_template_options['launch_date'];
                             echo ' ';
@@ -214,13 +214,15 @@
                     jQuery('#secs').countdown($countdown).on('finish.countdown', function () {
                         jQuery('#countdown').hide();
                         jQuery(".main-container").css('margin-top', '120px');
+                        jQuery("#rocket").css('margin-top', '-=120');
+                        count_completed = true;
 
-                        jQuery('#rocket').addClass('animated bounceOutUp');
-                        setTimeout(function () {
-                            jQuery("#rocket").css('margin-top', '75px');
-                            jQuery('#rocket').removeClass('bounceOutUp');
-                            jQuery('#rocket').addClass('bounceInUp');
-                        }, 3000);
+                        //                        jQuery('#rocket').addClass('animated bounceOutUp');
+                        //                        setTimeout(function () {
+                        //                            jQuery("#rocket").css('margin-top', '-75px');
+                        //                            jQuery('#rocket').removeClass('bounceOutUp');
+                        //                            jQuery('#rocket').addClass('bounceInUp');
+                        //                        }, 3000);
                     });
 <?php endif; ?>
             });
@@ -265,7 +267,11 @@
                 $('#rocket').hover(function () {
                     $(this).animate({'margin-top': "-=50"});
                 }, function () {
-                    $(this).animate({'margin-top': "180px"});
+                    if (count_completed) {
+                        $(this).animate({'margin-top': "30px"});
+                    } else {
+                        $(this).animate({'margin-top': "150px"});
+                    }
                 });
             });
         </script>

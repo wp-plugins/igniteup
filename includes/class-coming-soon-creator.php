@@ -62,10 +62,18 @@ class CSComingSoonCreator {
         add_submenu_page('cscs_templates', 'Options', __('Options', CSCS_TEXT_DOMAIN), 'manage_options', 'cscs_options', array('CSAdminOptions', 'optionsPage'));
     }
 
-    public function loadThemeScripts() {
+    private function greenToPublishTheme() {
+        if (isset($_REQUEST['igniteup']) && $_REQUEST['igniteup'] == 'force')
+            return TRUE;
         if (!$this->checkIfEnabled())
-            return;
+            return FALSE;
         if ($this->checkForSkipping())
+            return FALSE;
+        return TRUE;
+    }
+
+    public function loadThemeScripts() {
+        if (!$this->greenToPublishTheme())
             return;
 
         do_action('cscs_theme_scripts_' . CSCS_DEFAULT_TEMPLATE);
@@ -73,9 +81,7 @@ class CSComingSoonCreator {
     }
 
     public function dequeScripts() {
-        if (!$this->checkIfEnabled())
-            return;
-        if ($this->checkForSkipping())
+        if (!$this->greenToPublishTheme())
             return;
 
         $skip_scr = array('colors', 'wp-admin', 'login', 'install', 'wp-color-picker', 'customize-controls', 'customize-widgets', 'press-this', 'ie', 'admin-bar');
@@ -92,9 +98,7 @@ class CSComingSoonCreator {
     }
 
     public function myThemeRedirect($original_template) {
-        if (!$this->checkIfEnabled())
-            return $original_template;
-        if ($this->checkForSkipping())
+        if (!$this->greenToPublishTheme())
             return $original_template;
 
         global $wp;
@@ -105,14 +109,18 @@ class CSComingSoonCreator {
     }
 
     public function loadAdminScripts() {
-        wp_enqueue_style('cscs_comingsoon', plugin_dir_url(CSCS_FILE) . 'includes/css/main.css');
+        wp_enqueue_style('igniteup', plugin_dir_url(CSCS_FILE) . 'includes/css/main.css');
         wp_enqueue_style('wp-color-picker');
         wp_enqueue_script('jquery');
-        wp_register_script('cscs_js', plugin_dir_url(CSCS_FILE) . 'includes/js/main.js', array('jquery', 'wp-color-picker'), false, true);
-        wp_enqueue_script('cscs_js');
-        wp_enqueue_script('jquery-ui-datepicker');
-        wp_enqueue_style('jquery-style', plugin_dir_url(CSCS_FILE) . 'includes/css/jquery-ui.css');
+        wp_register_script('igniteup', plugin_dir_url(CSCS_FILE) . 'includes/js/main.js', array('jquery', 'wp-color-picker'), false, true);
+        wp_enqueue_script('igniteup');        
         wp_enqueue_style('rockyton-icon', plugin_dir_url(CSCS_FILE) . 'includes/css/icons/styles.css');
+
+        if (isset($_GET['page']) && $_GET['page'] == 'cscs_options') {
+            wp_enqueue_script('jquery-form', false, array('jquery'));
+            wp_enqueue_script('jquery-ui-datepicker');
+            wp_enqueue_style('jquery-style', plugin_dir_url(CSCS_FILE) . 'includes/css/jquery-ui.css');
+        }
     }
 
     public static function getDefaultTemplateList() {

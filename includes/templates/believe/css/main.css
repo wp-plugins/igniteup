@@ -1,4 +1,3 @@
-
 body{
     background-color: #19bd9b;
     width: 100%; 
@@ -21,18 +20,18 @@ body{
     font-size:32pt ;
     font-weight: 300;
     text-transform: uppercase;
-    font-family: "Biryani";
+    font-family: 'Biryani', sans-serif; 
     margin-bottom: -28px;
 }
 .title-bottom{
     font-size: 47pt;
     font-weight: bold;
     text-transform: uppercase;
-    font-family: "Montserrat";
+    font-family: 'Montserrat', sans-serif;
 }
 .paragraph{
     font-size:20pt ;
-    font-family: "Biryani";
+    font-family: 'Biryani', sans-serif;
     font-weight: 300;
 }
 .social>ul>li{
@@ -55,7 +54,7 @@ body{
 }
 #powered-by {
     margin-top: 50px;
-    font-family: "Biryani";
+    font-family: 'Biryani', sans-serif;
     font-weight: 300;
     font-size: 12px;
 }
