@@ -86,6 +86,8 @@ class CSComingSoonCreator {
 
         $skip_scr = array('colors', 'wp-admin', 'login', 'install', 'wp-color-picker', 'customize-controls', 'customize-widgets', 'press-this', 'ie', 'admin-bar');
         global $wp_styles;
+        if (!is_a($wp_styles, 'WP_Styles'))
+            return;
         $registered_array = $wp_styles->registered;
         if (!is_array($registered_array))
             $registered_array = array();
@@ -113,7 +115,7 @@ class CSComingSoonCreator {
         wp_enqueue_style('wp-color-picker');
         wp_enqueue_script('jquery');
         wp_register_script('igniteup', plugin_dir_url(CSCS_FILE) . 'includes/js/main.js', array('jquery', 'wp-color-picker'), false, true);
-        wp_enqueue_script('igniteup');        
+        wp_enqueue_script('igniteup');
         wp_enqueue_style('rockyton-icon', plugin_dir_url(CSCS_FILE) . 'includes/css/icons/styles.css');
 
         if (isset($_GET['page']) && $_GET['page'] == 'cscs_options') {

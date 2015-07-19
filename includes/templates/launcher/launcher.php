@@ -217,12 +217,12 @@
                         jQuery("#rocket").css('margin-top', '-=120');
                         count_completed = true;
 
-                        //                        jQuery('#rocket').addClass('animated bounceOutUp');
-                        //                        setTimeout(function () {
-                        //                            jQuery("#rocket").css('margin-top', '-75px');
-                        //                            jQuery('#rocket').removeClass('bounceOutUp');
-                        //                            jQuery('#rocket').addClass('bounceInUp');
-                        //                        }, 3000);
+                                                jQuery('#rocket').addClass('animated bounceOutUp');
+                                                setTimeout(function () {
+                                                    jQuery("#rocket").css('margin-top', '-75px');
+                                                    jQuery('#rocket').removeClass('bounceOutUp');
+                                                    jQuery('#rocket').addClass('bounceInUp');
+                                                }, 3000);
                     });
 <?php endif; ?>
             });
