@@ -28,6 +28,8 @@
                 <label><input type="checkbox" class="skip_checkbox" value="administrator" <?php check_checkboxes(in_array('administrator', $skip_for_array)); ?>><?php _e('Administrators', CSCS_TEXT_DOMAIN); ?></label>
                 <div class="clearfix"></div>
                 <label><input type="checkbox" class="skip_checkbox" value="editor" <?php check_checkboxes(in_array('editor', $skip_for_array)); ?>><?php _e('Editors', CSCS_TEXT_DOMAIN); ?></label>
+                <div class="clearfix"></div>
+                <label><input type="checkbox" class="skip_checkbox" value="subscriber" <?php check_checkboxes(in_array('subscriber', $skip_for_array)); ?>><?php _e('Subscribers', CSCS_TEXT_DOMAIN); ?></label>
                 <input type="hidden"  name="<?php echo CSCS_GENEROPTION_PREFIX . 'skipfor'; ?>" id="skip_for_value" value='<?php echo $skipfor; ?>'>
             </td>
         </tr>
@@ -41,9 +43,19 @@
         <tr>
             <th><label><?php _e('Powered by IgniteUp', CSCS_TEXT_DOMAIN); ?></label></th>
             <td>
-               <label><input type="checkbox" name="<?php echo $cs_powered_by = CSCS_GENEROPTION_PREFIX . 'powered_by'; ?>" value="1" <?php check_checkboxes(get_option($cs_powered_by) == '1'); ?>><?php _e('Show "Powered by IgniteUp" in the page', CSCS_TEXT_DOMAIN); ?></label>
+                <?php $cs_powered_by = CSCS_GENEROPTION_PREFIX . 'powered_by'; ?>
+                <label><input type="checkbox" name="<?php echo $cs_powered_by; ?>" value="1" <?php check_checkboxes(get_option($cs_powered_by) == '1'); ?>><?php _e('Show "Powered by IgniteUp" in the page', CSCS_TEXT_DOMAIN); ?></label>
             </td>
         </tr>
+
+
+        <tr>
+            <th><label><?php _e('Custom CSS', CSCS_TEXT_DOMAIN); ?></label></th>
+            <td>
+                <textarea name="<?php echo CSCS_GENEROPTION_PREFIX . 'customcss'; ?>" cols="50" rows="7"><?php echo get_option(CSCS_GENEROPTION_PREFIX . 'customcss', ''); ?></textarea>
+            </td>
+        </tr>
+
     </table>
     <p class="submit">
         <input type="submit" name="submit" id="submit" class="button button-primary" value="Save Changes">

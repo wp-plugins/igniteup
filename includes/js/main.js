@@ -56,15 +56,22 @@ jQuery(document).ready(function () {
         jQuery('body.igniteup_page_cscs_options .preview-igniteup, body.igniteup_page_cscs_options .submit').attr('disabled', 'disabled');
         jQuery('#saveResult').html("<span id='saveMessage' class='successModal'></span>");
         jQuery('#saveMessage').append("<span>Saving . . .</span>").show();
+		prwindow = window.open('', 'igniteup');
         jQuery('#igniteup-template-options').ajaxSubmit({
             success: function () {
                 jQuery('#saveMessage').html("<span>" + jQuery('#saveResult').data('text') + "</span>").show();
                 jQuery('body.igniteup_page_cscs_options .preview-igniteup, body.igniteup_page_cscs_options .submit').removeAttr('disabled');
-                prwindow = window.open(jQuery('body.igniteup_page_cscs_options .preview-igniteup').data('forward'), 'igniteup').focus();
+				var theurl = jQuery('body.igniteup_page_cscs_options .preview-igniteup').data('forward');
+                prwindow.location = theurl;
+				setTimeout("jQuery('#saveMessage').hide('slow');", 3000);
             },
-            timeout: 5000
-        });
-        setTimeout("jQuery('#saveMessage').hide('slow');", 5000);
+            timeout: 10000,
+			error: function(){
+				jQuery('#saveMessage').hide('slow');
+				alert('Saving process reached timeout! Please try again.');
+				jQuery('body.igniteup_page_cscs_options .preview-igniteup, body.igniteup_page_cscs_options .submit').removeAttr('disabled');				
+            }
+        });        
         return false;
     });
 });

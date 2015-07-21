@@ -1,8 +1,8 @@
 <?php
 
 class CSAdminOptions {
-    
-    public static $gener_options = array('enable', 'cs_page_title', 'skipfor','powered_by');
+
+    public static $gener_options = array('enable', 'cs_page_title', 'skipfor', 'powered_by', 'customcss');
 
     public static function registerGeneralOptions() {
         foreach (self::$gener_options as $val) {
@@ -27,8 +27,8 @@ class CSAdminOptions {
     public static function templatePage() {
         include 'views/admin-templates.php';
     }
-    
-    public static function subscribersPage(){
+
+    public static function subscribersPage() {
         include 'views/admin-subscribers.php';
     }
 
@@ -42,7 +42,7 @@ class CSAdminOptions {
     public static function getDefTemplate() {
         $saved_ = get_option(CSCS_DEFTEMP_OPTION, 'launcher');
         $file = glob(dirname(__FILE__) . '/templates/' . $saved_ . '/' . $saved_ . '.php');
-        if(count($file) < 1 ){
+        if (count($file) < 1) {
             update_option(CSCS_DEFTEMP_OPTION, 'launcher');
             return 'launcher';
         }

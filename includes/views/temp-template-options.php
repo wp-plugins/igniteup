@@ -78,7 +78,7 @@
     </p>
     <p class="submit">
         <input type="submit" name="save" class="button button-primary submit" value="Save Changes">
-        <input type="submit" name="preview" class="button preview-igniteup" value="Preview" data-forward="<?php echo esc_url(home_url('/?igniteup=force')); ?>">        
+        <a href="#" class="button preview-igniteup" data-forward="<?php echo esc_url(home_url('/?igniteup=force')); ?>">Preview</a>        
         <span id="saveResult" data-text="<?php echo htmlentities(__('Settings Saved Successfully', 'wp'), ENT_QUOTES); ?>"></span>       
     </p>    
 </form>

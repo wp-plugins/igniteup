@@ -78,6 +78,9 @@ class CSComingSoonCreator {
 
         do_action('cscs_theme_scripts_' . CSCS_DEFAULT_TEMPLATE);
         wp_enqueue_style('igniteup-front', plugin_dir_url(CSCS_FILE) . 'includes/css/front.css');
+
+        $custom_css = get_option(CSCS_GENEROPTION_PREFIX . 'customcss', '');
+        wp_add_inline_style('igniteup-front', $custom_css);
     }
 
     public function dequeScripts() {
@@ -111,11 +114,10 @@ class CSComingSoonCreator {
     }
 
     public function loadAdminScripts() {
-        wp_enqueue_style('igniteup', plugin_dir_url(CSCS_FILE) . 'includes/css/main.css');
+        wp_enqueue_style('igniteup', plugin_dir_url(CSCS_FILE) . 'includes/css/main.css', array(), '1.2.1');
         wp_enqueue_style('wp-color-picker');
         wp_enqueue_script('jquery');
-        wp_register_script('igniteup', plugin_dir_url(CSCS_FILE) . 'includes/js/main.js', array('jquery', 'wp-color-picker'), false, true);
-        wp_enqueue_script('igniteup');
+        wp_enqueue_script('igniteup', plugin_dir_url(CSCS_FILE) . 'includes/js/main.js', array('jquery', 'wp-color-picker'), '1.2.1', true);
         wp_enqueue_style('rockyton-icon', plugin_dir_url(CSCS_FILE) . 'includes/css/icons/styles.css');
 
         if (isset($_GET['page']) && $_GET['page'] == 'cscs_options') {
