@@ -1,0 +1,95 @@
+body{
+    background-color: #19bd9b;
+    width: 100%; 
+}
+.main-container{
+    max-width: 1000px;
+}
+.logo{
+    margin-top: 90px;
+    margin-bottom: 30px;
+}
+#plane{
+    top: 157px;
+    position: absolute;
+    width: 700px;
+    right: 10%;
+
+}
+.title-top{
+    font-size:32pt ;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: 'Biryani', sans-serif; 
+    margin-bottom: -28px;
+}
+.title-bottom{
+    font-size: 47pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+.paragraph{
+    font-size:20pt ;
+    font-family: 'Biryani', sans-serif;
+    font-weight: 300;
+}
+.social>ul>li{
+    float: left;
+    list-style: none;
+    margin-right: 10px;
+    min-height: 25px;
+}
+.social>ul{
+    margin: 60px 10px 10px 0;
+    padding:0;
+    display: inline-block;
+}
+.social-icon{
+    transition: all ease 400ms;
+    display: block;
+}
+.social-icon:hover{
+    margin-top:-10px;
+}
+#powered-by {
+    margin-top: 50px;
+    font-family: 'Biryani', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+}
+@media(max-width:1050px){
+    #plane{
+        right:3%;
+    }
+}
+@media(max-width:800px){
+    #plane{
+        right:1%;
+    }
+}
+@media(max-width:768px){
+    .title-top{
+        font-size: 16pt;
+        text-align: center;
+    }
+    .title-bottom{
+        font-size: 23pt;
+        margin-top: 17px;
+        text-align: center;
+    }
+    .paragraph {
+        font-size: 10pt;
+        margin: 30px 0;
+        text-align: center;
+    }
+    .logo{
+        text-align: center;
+    }
+    .social{
+        text-align: center;
+    }
+    .social>ul{
+        margin: 0;
+    }
+}
