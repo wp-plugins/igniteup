@@ -30,13 +30,13 @@ Create decent pages to let users know the site is in Coming Soon, Maintenance Mo
 * Powered by Twitter Bootstrap
 * Fully Customizable Templates
 * Email Subscription Form Available in Launcher Template
+* Mailchimp and Mailpoet Integration
 * Export Email Subscriber List as a CSV or BCC Text
 * Translation Ready
 * Multisite Support
 * More New Templates Coming Soon with Future Updates
 
 [youtube https://www.youtube.com/watch?v=59KSFWCF0Rw&list=PL1W6Z2r2qAK1_VtjZkk32rU5I0AUl6xZc]
-
 
 = Included Languages =
 
