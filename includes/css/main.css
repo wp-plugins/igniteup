@@ -1,0 +1,49 @@
+#cscs-templates{margin-top: 20px;}
+
+#cscs-templates .template-box{width: 30.6%;float: left;position: relative;  margin: 0 4% 4% 0;}
+#cscs-templates .template-box:nth-child(3n) {margin-right: 0;}
+#cscs-templates .template-box img{width: 100%;}
+#cscs-templates .template-box .template-title{position: absolute; top:0; left:0; right: 0;  background-color: rgba(0, 0, 0, 0.38); padding: 10px;color: #fff;font-size: 15px;}
+#cscs-templates .template-box .template-footer{position: absolute; bottom:0; left:0; right: 0;  background-color: #23282d   ;padding: 10px;color: #fff;font-size: 15px;text-align: right;}
+#cscs-templates .template-box .template-footer .button-customize, .template-box .template-footer .button-activate{float:right;}
+#cscs-templates .template-box .template-footer .button-delete{float:left;}
+#cscs-templates .template-box .template-footer form{display: inline;}
+
+.cscs_message{padding: 20px !important;   margin: 5px 0 15px;background: #fff;  border-left: 4px solid #7ad03a;  -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);  box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);}
+h2.cscs-nav{border-bottom: 1px solid #ccc;padding-bottom: 0;padding-left: 10px;}
+.cscs-nav-tabs{border: 1px solid #ccc;border-bottom: none;background: #e4e4e4;color: #555;display: inline-block;text-decoration: none;margin: -4px 2px -1px -2px;padding: 6px 10px;font-weight: 700;font-size: 15px;line-height: 24px;}
+.cscs-nav-tabs:hover{background-color: #fff;color: #464646;}
+.cscs-nav-tabs.active, .cscs-nav-tabs.active:hover{border-bottom: 1px solid #f1f1f1;background: #f1f1f1;color: #000;}
+.clearfix{clear:both;}
+
+#toplevel_page_cscs_templates .wp-menu-image:before {font-family: "rockyton" !important;content: 'm' !important;}
+
+body.igniteup_page_cscs_options #saveResult{margin-left: 20px;}
+body.igniteup_page_cscs_options .reset-igniteup{margin-left: 0;}
+body.igniteup_page_cscs_options .cs-hidden-section{display: none;}
+
+.igniteup_page_cscs_options .update-page{padding: 20px;}
+.igniteup_page_cscs_options .update-page h1.title{color:#0073AA;}
+.igniteup_page_cscs_options .update-page h2.subtitle{margin-bottom: 30px;}
+
+.igniteup_page_cscs_options .update-page .widget-wrapper{display: block;}
+.igniteup_page_cscs_options .update-page .help-page-col{float:left;margin-right: 2%; width: 32%;}
+.igniteup_page_cscs_options .update-page .help-page-widget{background-color: #FFF; margin-bottom: 20px;padding: 20px;}
+.igniteup_page_cscs_options .update-page .help-page-col-last{margin-right: 0;}
+.igniteup_page_cscs_options .update-page .help-page-widget h2{font-weight: 600;}
+.igniteup_page_cscs_options .update-page .help-page-widget p{font-size: 16px;color: #777;}
+.igniteup_page_cscs_options .update-page .changelog h3{color:#539030;}
+.igniteup_page_cscs_options .update-page .changelog .changelog-main-list li.main-item{font-size: 21px; color: #0073AA; margin-bottom: 20px;display: inline-block;}
+.igniteup_page_cscs_options .update-page .changelog .changelog-main-list li.main-item span{font-size: 13px;color: #49E21F;font-style: italic;}
+.igniteup_page_cscs_options .update-page .changelog .changelog-sub-list{margin-top: 10px; margin-left: 20px;list-style: square;line-height: 1.5;}
+.igniteup_page_cscs_options .update-page .changelog .changelog-sub-list li{font-size: 16px; color: #777;}
+
+#wp-admin-bar-igniteup_enabled{background-color: #C70000 !important;}
+#wp-admin-bar-igniteup_enabled:hover a{background: #A20A0A !important;color: #FFFFFF !important;}
+
+@media screen and (max-width:767px){
+    .igniteup_page_cscs_options .update-page .help-page-col{float:left;margin-right: 0; width: 100%;}
+    
+    #cscs-templates .template-box{width: 80%;position: relative;  margin: 0 auto 20px auto; float: inherit;}
+    #cscs-templates .template-box:nth-child(3n) {margin-right: auto;}
+}

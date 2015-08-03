@@ -1,0 +1,248 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: IgniteUp\n"
+"POT-Creation-Date: 2015-07-28 17:19+0530\n"
+"PO-Revision-Date: 2015-07-28 17:19+0530\n"
+"Last-Translator: Thambaru Wijesekara <thambaru@gmail.com>\n"
+"Language-Team: CeylonSystems <info@ceylonsystems.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: includes\n"
+
+#: includes/class-coming-soon-creator.php:60
+msgid "CS Coming Soon"
+msgstr ""
+
+#: includes/class-coming-soon-creator.php:60
+msgid "IgniteUp"
+msgstr ""
+
+#: includes/class-coming-soon-creator.php:61
+#: includes/views/admin-templates.php:35
+msgid "Templates"
+msgstr ""
+
+#: includes/class-coming-soon-creator.php:62
+#: includes/views/admin-subscribers.php:6
+#: includes/views/temp-general-options.php:32
+msgid "Subscribers"
+msgstr ""
+
+#: includes/class-coming-soon-creator.php:63
+msgid "Options"
+msgstr ""
+
+#: includes/views/admin-dashboard.php:9
+msgid "Settings saved."
+msgstr ""
+
+#: includes/views/admin-dashboard.php:16
+msgid "General"
+msgstr ""
+
+#: includes/views/admin-dashboard.php:17 includes/views/admin-dashboard.php:28
+msgid "Template Options"
+msgstr ""
+
+#: includes/views/admin-dashboard.php:18
+msgid "Integrations"
+msgstr ""
+
+#: includes/views/admin-dashboard.php:19
+msgid "Help"
+msgstr ""
+
+#: includes/views/admin-dashboard.php:25
+msgid "General Options"
+msgstr ""
+
+#: includes/views/admin-dashboard.php:31
+msgid "About IgniteUp and Support Information"
+msgstr ""
+
+#: includes/views/admin-dashboard.php:34
+msgid "Manage Integrations"
+msgstr ""
+
+#: includes/views/admin-subscribers.php:7
+msgid "List of subscribers you've got through the Coming Soon page."
+msgstr ""
+
+#: includes/views/admin-subscribers.php:13
+msgid "Bulk Actions"
+msgstr ""
+
+#: includes/views/admin-subscribers.php:14
+msgid "Move to Trash"
+msgstr ""
+
+#: includes/views/admin-subscribers.php:16
+msgid "Apply"
+msgstr ""
+
+#: includes/views/admin-subscribers.php:19
+msgid "EXPORT CSV"
+msgstr ""
+
+#: includes/views/admin-subscribers.php:20
+msgid "EXPORT BCC"
+msgstr ""
+
+#: includes/views/admin-subscribers.php:30
+#: includes/views/admin-subscribers.php:50
+msgid "Name"
+msgstr ""
+
+#: includes/views/admin-subscribers.php:31
+#: includes/views/admin-subscribers.php:51
+msgid "Email Address"
+msgstr ""
+
+#: includes/views/admin-subscribers.php:40
+msgid "UNKNOWN"
+msgstr ""
+
+#: includes/views/admin-subscribers.php:42
+msgid "Remove"
+msgstr ""
+
+#: includes/views/admin-templates.php:12
+msgid "Customize"
+msgstr ""
+
+#: includes/views/admin-templates.php:17
+msgid "Activate"
+msgstr ""
+
+#: includes/views/admin-templates.php:25
+msgid "Uninstall"
+msgstr ""
+
+#: includes/views/admin-templates.php:37
+msgid "A new template activated!"
+msgstr ""
+
+#: includes/views/admin-templates.php:37
+msgid "Customize it"
+msgstr ""
+
+#: includes/views/temp-general-options.php:15
+#: includes/views/temp-integration-options.php:9
+msgid "Enable / Disable"
+msgstr ""
+
+#: includes/views/temp-general-options.php:18
+msgid "Enable Coming Soon or Site Offline"
+msgstr ""
+
+#: includes/views/temp-general-options.php:22
+msgid "Skip Page For"
+msgstr ""
+
+#: includes/views/temp-general-options.php:28
+msgid "Administrators"
+msgstr ""
+
+#: includes/views/temp-general-options.php:30
+msgid "Editors"
+msgstr ""
+
+#: includes/views/temp-general-options.php:37
+msgid "Page Title"
+msgstr ""
+
+#: includes/views/temp-general-options.php:40
+msgid "This will be the title of the coming soon page."
+msgstr ""
+
+#: includes/views/temp-general-options.php:44
+msgid "Powered by IgniteUp"
+msgstr ""
+
+#: includes/views/temp-general-options.php:47
+msgid "Show \"Powered by IgniteUp\" in the page"
+msgstr ""
+
+#: includes/views/temp-general-options.php:53
+msgid "Custom CSS"
+msgstr ""
+
+#: includes/views/temp-integration-options.php:18
+msgid "Enable External Mailinglist Integration"
+msgstr ""
+
+#: includes/views/temp-integration-options.php:20
+msgid ""
+"Tick this if you need to send your subscribers into one of the following "
+"Mailing list providers."
+msgstr ""
+
+#: includes/views/temp-integration-options.php:26
+msgid "Save subscribers to"
+msgstr ""
+
+#: includes/views/temp-integration-options.php:38
+msgid ""
+"Choose the default provider to save your subscribers. IgniteUp will always "
+"save to the local database."
+msgstr ""
+
+#: includes/views/temp-integration-options.php:43
+msgid ""
+"If you need to use Mailchimp integration, provide an API key. So we can get "
+"you the mailing lists that you have in your Mailchimp account to select."
+msgstr ""
+
+#: includes/views/temp-integration-options.php:47
+msgid "Mailchimp API Key"
+msgstr ""
+
+#: includes/views/temp-integration-options.php:55
+msgid ""
+"Need help finding your API key? <a href=\"http://kb.mailchimp.com/accounts/"
+"management/about-api-keys\" target=\"_blank\">Read this article</a>."
+msgstr ""
+
+#: includes/views/temp-integration-options.php:62
+#: includes/views/temp-integration-options.php:94
+msgid "Select the list"
+msgstr ""
+
+#: includes/views/temp-integration-options.php:77
+msgid "Select the Mailchimp list you want your subscribers to be added."
+msgstr ""
+
+#: includes/views/temp-integration-options.php:79
+msgid "There are no lists in your Mailchimp account."
+msgstr ""
+
+#: includes/views/temp-integration-options.php:81
+msgid "Your API key seems to invalid!"
+msgstr ""
+
+#: includes/views/temp-integration-options.php:90
+msgid ""
+"If you need to use Mailpoet integration, make sure you have Mailpoet plugin "
+"installed."
+msgstr ""
+
+#: includes/views/temp-integration-options.php:110
+msgid "Install Mailpoet plugin to use the service"
+msgstr ""
+
+#: includes/views/temp-template-options.php:14
+msgid "Something is wrong with your template"
+msgstr ""
+
+#: includes/views/temp-template-options.php:70
+msgid "No options defined for the active template!"
+msgstr ""
+
+#: includes/views/temp-template-options.php:82
+msgid "Settings Saved Successfully"
+msgstr ""

@@ -1,0 +1,256 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: IgniteUp\n"
+"POT-Creation-Date: 2015-07-28 17:13+0530\n"
+"PO-Revision-Date: 2015-07-28 17:19+0530\n"
+"Last-Translator: Thambaru Wijesekara <thambaru@gmail.com>\n"
+"Language-Team: CeylonSystems <info@ceylonsystems.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: includes\n"
+
+#: includes/class-coming-soon-creator.php:60
+msgid "CS Coming Soon"
+msgstr "CS Coming Soon"
+
+#: includes/class-coming-soon-creator.php:60
+msgid "IgniteUp"
+msgstr "IgniteUp"
+
+#: includes/class-coming-soon-creator.php:61
+#: includes/views/admin-templates.php:35
+msgid "Templates"
+msgstr "තේමා"
+
+#: includes/class-coming-soon-creator.php:62
+#: includes/views/admin-subscribers.php:6
+#: includes/views/temp-general-options.php:32
+msgid "Subscribers"
+msgstr "දායකත්වයන්"
+
+#: includes/class-coming-soon-creator.php:63
+msgid "Options"
+msgstr "සැකසුම්"
+
+#: includes/views/admin-dashboard.php:9
+msgid "Settings saved."
+msgstr "වෙනස්කම් සුරැකිණි."
+
+#: includes/views/admin-dashboard.php:16
+msgid "General"
+msgstr "ප්‍රධාන"
+
+#: includes/views/admin-dashboard.php:17 includes/views/admin-dashboard.php:28
+msgid "Template Options"
+msgstr "තේමා සැකසුම්"
+
+#: includes/views/admin-dashboard.php:18
+msgid "Integrations"
+msgstr "සේවා"
+
+#: includes/views/admin-dashboard.php:19
+msgid "Help"
+msgstr "උදව්"
+
+#: includes/views/admin-dashboard.php:25
+msgid "General Options"
+msgstr "ප්‍රධාන සැකසුම්"
+
+#: includes/views/admin-dashboard.php:31
+msgid "About IgniteUp and Support Information"
+msgstr "IgniteUp සහ සහාය විස්තර පිළිබඳව"
+
+#: includes/views/admin-dashboard.php:34
+msgid "Manage Integrations"
+msgstr "සේවා කළමනාකරණය"
+
+#: includes/views/admin-subscribers.php:7
+msgid "List of subscribers you've got through the Coming Soon page."
+msgstr "අඩවිය හරහා ඊමේල් දායකත්වය ලබාගත් අයගේ ලැයිස්තුව."
+
+#: includes/views/admin-subscribers.php:13
+msgid "Bulk Actions"
+msgstr "බහුපෙළ ක්‍රියා"
+
+#: includes/views/admin-subscribers.php:14
+msgid "Move to Trash"
+msgstr "ඉවතලන්න"
+
+#: includes/views/admin-subscribers.php:16
+msgid "Apply"
+msgstr "යොදන්න"
+
+#: includes/views/admin-subscribers.php:19
+msgid "EXPORT CSV"
+msgstr "CSV නිර්යාතනය"
+
+#: includes/views/admin-subscribers.php:20
+msgid "EXPORT BCC"
+msgstr "BCC නිර්යාතනය"
+
+#: includes/views/admin-subscribers.php:30
+#: includes/views/admin-subscribers.php:50
+msgid "Name"
+msgstr "නම"
+
+#: includes/views/admin-subscribers.php:31
+#: includes/views/admin-subscribers.php:51
+msgid "Email Address"
+msgstr "ඊතැපැල් ලිපිනය"
+
+#: includes/views/admin-subscribers.php:40
+msgid "UNKNOWN"
+msgstr "නොදන්නා"
+
+#: includes/views/admin-subscribers.php:42
+msgid "Remove"
+msgstr "ඉවත් කරන්න"
+
+#: includes/views/admin-templates.php:12
+msgid "Customize"
+msgstr "අභිරුචිකරණය"
+
+#: includes/views/admin-templates.php:17
+msgid "Activate"
+msgstr "සබල කරන්න"
+
+#: includes/views/admin-templates.php:25
+msgid "Uninstall"
+msgstr "අස්ථාපනය"
+
+#: includes/views/admin-templates.php:37
+msgid "A new template activated!"
+msgstr "නව තේමාවක් සබල විණි!"
+
+#: includes/views/admin-templates.php:37
+msgid "Customize it"
+msgstr "අභිරුචි කරන්න"
+
+#: includes/views/temp-general-options.php:15
+#: includes/views/temp-integration-options.php:9
+msgid "Enable / Disable"
+msgstr "සබල / අබල"
+
+#: includes/views/temp-general-options.php:18
+msgid "Enable Coming Soon or Site Offline"
+msgstr "Coming Soon ‍හෝ Site Offline සබල කරන්න"
+
+#: includes/views/temp-general-options.php:22
+msgid "Skip Page For"
+msgstr "මොවුන්ට පිටුව මගහරින්න"
+
+#: includes/views/temp-general-options.php:28
+msgid "Administrators"
+msgstr "පරිපාලකවරු"
+
+#: includes/views/temp-general-options.php:30
+msgid "Editors"
+msgstr "සංස්කාරකවරු"
+
+#: includes/views/temp-general-options.php:37
+msgid "Page Title"
+msgstr "පිටු ශීර්ෂය"
+
+#: includes/views/temp-general-options.php:40
+msgid "This will be the title of the coming soon page."
+msgstr "මෙය ඔබේ coming soon පිටුවේ ශීර්ෂය වනු ඇත."
+
+#: includes/views/temp-general-options.php:44
+msgid "Powered by IgniteUp"
+msgstr "ප්ලගිනයට සහාය"
+
+#: includes/views/temp-general-options.php:47
+msgid "Show \"Powered by IgniteUp\" in the page"
+msgstr "පිටුවේ \"Powered by IgniteUp\" ලෙස පෙන්වන්න"
+
+#: includes/views/temp-general-options.php:53
+msgid "Custom CSS"
+msgstr "අභිමත CSS"
+
+#: includes/views/temp-integration-options.php:18
+msgid "Enable External Mailinglist Integration"
+msgstr "බාහිර ලැයිස්තු ඉ-ලිපි සේවා සක්‍රීය කරන්න"
+
+#: includes/views/temp-integration-options.php:20
+msgid ""
+"Tick this if you need to send your subscribers into one of the following "
+"Mailing list providers."
+msgstr ""
+"ඔබේ දායකත්වය ලැබූවන් ලැයිස්තු ඉ-ලිපි (Mailing list) සේවා සපයන්නන් වෙත එක් කිරීමට මෙහි හරි "
+"ලකුණ යොදන්න."
+
+#: includes/views/temp-integration-options.php:26
+msgid "Save subscribers to"
+msgstr "දායකත්වයන් සුරැකිය යුත්තේ"
+
+#: includes/views/temp-integration-options.php:38
+msgid ""
+"Choose the default provider to save your subscribers. IgniteUp will always "
+"save to the local database."
+msgstr ""
+"ඔබේ දායකත්වය දරන්නන් සුරැකීම සඳහා මූලික සේවා සපයන්නා තෝරන්න. IgniteUp හැමවිටම මේවා "
+"ස්ථානීය දත්තපාදකයට ද සුරකිනු ඇත."
+
+#: includes/views/temp-integration-options.php:43
+msgid ""
+"If you need to use Mailchimp integration, provide an API key. So we can get "
+"you the mailing lists that you have in your Mailchimp account to select."
+msgstr ""
+"ඔබට Mailchimp සේවා අවශ්‍ය නම්, API යතුරක් ලබා දෙන්න. එවිට අපට ඔබේ Mailchimp ගිණුමේ ඇති "
+"ඉ-ලිපි ලැයිස්තුව තෝරාගැනීම සඳහා අවකාශ සැලසිය හැකියි."
+
+#: includes/views/temp-integration-options.php:47
+msgid "Mailchimp API Key"
+msgstr "Mailchimp API යතුර"
+
+#: includes/views/temp-integration-options.php:55
+msgid ""
+"Need help finding your API key? <a href=\"http://kb.mailchimp.com/accounts/"
+"management/about-api-keys\" target=\"_blank\">Read this article</a>."
+msgstr ""
+"API යතුර සෙවීමට උපකාර අවශ්‍ය ද? <a href=\"http://kb.mailchimp.com/accounts/"
+"management/about-api-keys\" target=\"_blank\">මේ ලිපිය කියවන්න</a>."
+
+#: includes/views/temp-integration-options.php:62
+#: includes/views/temp-integration-options.php:94
+msgid "Select the list"
+msgstr "ලැයිස්තුව තෝරන්න"
+
+#: includes/views/temp-integration-options.php:77
+msgid "Select the Mailchimp list you want your subscribers to be added."
+msgstr "ඔබේ දායකත්වය දැරූවන් එක් කළ යුතු Mailchip ලැයිස්තුව තෝරන්න"
+
+#: includes/views/temp-integration-options.php:79
+msgid "There are no lists in your Mailchimp account."
+msgstr "ඔබේ Mailchimp ගිණුමේ කිසිදු ලැයිස්තුවක් නොමැත."
+
+#: includes/views/temp-integration-options.php:81
+msgid "Your API key seems to invalid!"
+msgstr "ඔබේ API යතුර වැරදියි!"
+
+#: includes/views/temp-integration-options.php:90
+msgid ""
+"If you need to use Mailpoet integration, make sure you have Mailpoet plugin "
+"installed."
+msgstr "ඔබට Mailpoet සේවාව අවශ්‍ය නම් කරුණාකර Mailpoet ප්ලගිනය ස්ථාපනය කරන්න."
+
+#: includes/views/temp-integration-options.php:110
+msgid "Install Mailpoet plugin to use the service"
+msgstr "මෙම සේවාව භාවිතා කිරීමට Mailpoet ප්ලගිනය ස්ථාපනය කරන්න."
+
+#: includes/views/temp-template-options.php:14
+msgid "Something is wrong with your template"
+msgstr "ඔබේ තේමාවේ කිසියම් වරදක් වෙයි."
+
+#: includes/views/temp-template-options.php:70
+msgid "No options defined for the active template!"
+msgstr "සබල කළ තේමාව සඳහා කිසිදු සැකසුම් නැත!"
+
+#: includes/views/temp-template-options.php:82
+msgid "Settings Saved Successfully"
+msgstr "වෙනස්කම් සුරැකිණි."

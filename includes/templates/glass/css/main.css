@@ -1,0 +1,88 @@
+.logo{
+    margin: 0 auto;
+}
+.glass-wrapper{
+    background-color: rgba( 0, 0, 0, 0.322 );
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.27);
+    margin: 100px 0;
+    padding: 30px 20px;
+}
+.glass-wrapper h2{
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 35px;
+}
+.glass-wrapper p{
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 18px;
+}
+#powered-by{
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 14px;
+}
+.glass-wrapper .social-icon {
+    font-size: 50px;
+    margin: 0 auto;
+    list-style: none;
+    display: table;
+    padding: 0;
+}
+.glass-wrapper .social-icon>li{
+    display: inline;
+    margin-right: 15px; 
+}
+.glass-wrapper .social-icon>li:last-child{
+    margin-right: 0;
+}
+.glass-wrapper .social-icon>li>a:hover{
+    text-decoration: none;
+}
+.form-control {
+    background: rgba(255, 255, 255, 0.14);
+    margin: 5px 0;
+    border-radius: 0;
+    height: 40px;
+    color: #fff;
+}
+.form-control::-webkit-input-placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+.form-control:-moz-placeholder { /* Firefox 18- */
+    color: rgba(255,255,255,0.5); 
+}
+
+.form-control::-moz-placeholder {  /* Firefox 19+ */
+    color: rgba(255,255,255,0.5);
+}
+
+.form-control:-ms-input-placeholder {  
+    color: rgba(255,255,255,0.5); 
+}
+#subscribe-btn{
+    background: rgba(255, 255, 255, 0.49);
+    border-radius: 0;
+    border: 1px solid rgba(255, 255, 255, 0.49);
+    color: #fff;
+    height: 40px;
+    margin: 5px 0;
+    border-left: 0;
+}
+#subscribe-btn:hover{
+    background: rgba(255, 255, 255, 0.69);
+    color:#666;
+}
+@media (max-width:768px){
+    .glass-wrapper p{
+        font-size: 16px;
+        text-align:center;
+    }
+    .glass-wrapper{        
+        margin: 50px 0;
+    }
+    .glass-wrapper h2{
+        font-size: 30px;
+    }
+}
