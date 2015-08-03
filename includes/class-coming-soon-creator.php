@@ -357,11 +357,15 @@ class CSComingSoonCreator {
     public function showWelcomeMessage() {
         if (defined('DOING_AJAX') && DOING_AJAX)
             return;
-        $show_welcome = get_option(CSCS_GENEROPTION_PREFIX . 'show_welcome_notice', 'no');
-        if ($show_welcome == 'yes') {
-            update_option(CSCS_GENEROPTION_PREFIX . 'show_welcome_notice', 'no');
+
+        // set options for showing welcome message.
+        $prev_version = get_option(CSCS_GENEROPTION_PREFIX . 'version', '1.0');
+        if (floatval(CSCS_CURRENT_VERSION) !== floatval($prev_version) && floatval(CSCS_CURRENT_VERSION) > floatval($prev_version)){
+            update_option(CSCS_GENEROPTION_PREFIX . 'version', '' . CSCS_CURRENT_VERSION);
             wp_redirect(admin_url('admin.php?page=cscs_options&section=help'));
+            exit;
         }
+        //-------------
     }
 
     public function addHeaderStatics() {

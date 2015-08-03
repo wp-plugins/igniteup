@@ -60,14 +60,7 @@ class CSAdminOptions {
 
     public static function setDefaultOptions() {
 
-        // set options for showing welcome message.
-        $prev_version = get_option(CSCS_GENEROPTION_PREFIX . 'version', '1.0');
-        $plugin_data = get_plugin_data(CSCS_FILE, false);
-        $plugin_version = floatval($plugin_data['Version']);
-        if ($plugin_version > floatval($prev_version))
-            update_option(CSCS_GENEROPTION_PREFIX . 'show_welcome_notice', 'yes');
-        update_option(CSCS_GENEROPTION_PREFIX . 'version', '' . $plugin_version);
-        //-------------
+        
     }
 
     public static function selectOptionIsSelected($saved_val, $current_val) {
