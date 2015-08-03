@@ -3,8 +3,8 @@ Contributors: ceylonsystems
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E6MY6RKB8DAEL
 Tags: coming soon, coming soon page, construction, landing page, launch, launch page, maintenance, maintenance mode, newsletter, subscribe, offline, unavailable, under construction, wordpress coming soon, wordpress maintenance mode, wordpress under construction, igniter
 Requires at least: 3.0.1
-Tested up to: 4.2.2
-Stable tag: 1.2.1
+Tested up to: 4.2.3
+Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -34,6 +34,8 @@ Create decent pages to let users know the site is in Coming Soon, Maintenance Mo
 * Translation Ready
 * Multisite Support
 * More New Templates Coming Soon with Future Updates
+
+[youtube https://www.youtube.com/watch?v=nv-ZuZWK3ik&index=2&list=PL1W6Z2r2qAK1_VtjZkk32rU5I0AUl6xZc]
 
 = Included Languages =
 
@@ -92,6 +94,14 @@ You can post your question / suggestion in the [IgniteUp forums](https://wordpre
 5. Believe Template Modified with Background Image
 
 == Changelog ==
+
+= 2.0 =
+* Mailchimp and Mailpoet integration to save subscribers directly to your already existing mailing lists
+* Added options to add a favicon
+* Added subscribe form support into the Glass template as well
+* Added an admin bar notification when maintenance mode is enabled
+* Fixed duplicate subscriber saving
+* Fixed conflict in the backend with some plugins
 
 = 1.2.1 =
 * Add support to skip the page for subscriber role as well

@@ -3,6 +3,7 @@
 include 'class-coming-soon-creator.php';
 include 'class-admin-options.php';
 include 'class-dbmigrations.php';
+include 'class-mailchimp.php';
 
 /*
  * 

@@ -65,7 +65,7 @@ a:hover, a:focus{
 .text-box {
     border: none;
     border-radius: 0;
-    padding: 22px 18px;
+    height:44px;
 }
 .subscribe-btn{
     padding: 12px 23px;

@@ -56,28 +56,34 @@ jQuery(document).ready(function () {
         jQuery('body.igniteup_page_cscs_options .preview-igniteup, body.igniteup_page_cscs_options .submit').attr('disabled', 'disabled');
         jQuery('#saveResult').html("<span id='saveMessage' class='successModal'></span>");
         jQuery('#saveMessage').append("<span>Saving . . .</span>").show();
-		prwindow = window.open('', 'igniteup');
+        prwindow = window.open('', 'igniteup');
         jQuery('#igniteup-template-options').ajaxSubmit({
             success: function () {
                 jQuery('#saveMessage').html("<span>" + jQuery('#saveResult').data('text') + "</span>").show();
                 jQuery('body.igniteup_page_cscs_options .preview-igniteup, body.igniteup_page_cscs_options .submit').removeAttr('disabled');
-				var theurl = jQuery('body.igniteup_page_cscs_options .preview-igniteup').data('forward');
+                var theurl = jQuery('body.igniteup_page_cscs_options .preview-igniteup').data('forward');
                 prwindow.location = theurl;
-				setTimeout("jQuery('#saveMessage').hide('slow');", 3000);
+                setTimeout("jQuery('#saveMessage').hide('slow');", 3000);
             },
             timeout: 10000,
-			error: function(){
-				jQuery('#saveMessage').hide('slow');
-				alert('Saving process reached timeout! Please try again.');
-				jQuery('body.igniteup_page_cscs_options .preview-igniteup, body.igniteup_page_cscs_options .submit').removeAttr('disabled');				
+            error: function () {
+                jQuery('#saveMessage').hide('slow');
+                alert('Saving process reached timeout! Please try again.');
+                jQuery('body.igniteup_page_cscs_options .preview-igniteup, body.igniteup_page_cscs_options .submit').removeAttr('disabled');
             }
-        });        
+        });
         return false;
     });
 });
 
+/*
+ * 
+ * Reset defaults button action
+ * 
+ */
+
 jQuery(document).on('click', 'body.igniteup_page_cscs_options .reset-igniteup', function (e) {
-    if(!confirm("Are you sure to reset template options to defaults?"))
+    if (!confirm("Are you sure to reset template options to defaults?"))
         return false;
     jQuery('.reset-supported').each(function () {
         var defval_ = jQuery(this).data('defval');
@@ -86,3 +92,24 @@ jQuery(document).on('click', 'body.igniteup_page_cscs_options .reset-igniteup', 
     jQuery('#igniteup-template-options').submit();
     e.preventDefault();
 });
+
+/*
+ * 
+ * Integration page manage sections
+ * 
+ */
+
+jQuery(document).ready(function () {
+    showHideIntegrationSection(true);
+});
+
+jQuery(document).on('change', '#cs-selected-provider', function () {
+    showHideIntegrationSection();
+});
+
+function showHideIntegrationSection(load) {
+    if (load !== true)
+        jQuery('.cs-hidden-section').slideUp();
+    var selected_val = jQuery('#cs-selected-provider').val();
+    jQuery('#cs-section-' + selected_val).slideDown();
+}

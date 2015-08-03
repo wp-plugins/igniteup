@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <title> <?php echo (!empty($the_cs_template_options["general_cs_page_title"]) ? $the_cs_template_options["general_cs_page_title"] : 'Almost Ready we are ready to launch.'); ?> </title>
+        <title> <?php echo (!empty($the_cs_template_options["general_cs_page_title"]) ? $the_cs_template_options["general_cs_page_title"] : 'Almost Ready to Launch | ' . get_bloginfo('name')); ?> </title>
 
         <style>
             a{
@@ -95,7 +95,7 @@
                     </div>
                     <div class="error-msg hidden" style="margin-top: 0px;">
                         <div class="alert alert-danger alert-dismissible" role="alert">
-                            <div class="text-center"> <strong>Invalid email address.</strong> Please enter again.</div>
+                            <div class="text-center" id='error-msg-text'> </div>
                         </div>
                     </div>
                     <div class="social">
@@ -217,12 +217,12 @@
                         jQuery("#rocket").css('margin-top', '-=120');
                         count_completed = true;
 
-                                                jQuery('#rocket').addClass('animated bounceOutUp');
-                                                setTimeout(function () {
-                                                    jQuery("#rocket").css('margin-top', '-75px');
-                                                    jQuery('#rocket').removeClass('bounceOutUp');
-                                                    jQuery('#rocket').addClass('bounceInUp');
-                                                }, 3000);
+                        jQuery('#rocket').addClass('animated bounceOutUp');
+                        setTimeout(function () {
+                            jQuery("#rocket").css('margin-top', '-75px');
+                            jQuery('#rocket').removeClass('bounceOutUp');
+                            jQuery('#rocket').addClass('bounceInUp');
+                        }, 3000);
                     });
 <?php endif; ?>
             });
@@ -243,6 +243,7 @@
                     dataType: 'json',
                     success: function (data) {
                         if (data['error']) {
+                            jQuery('.error-msg #error-msg-text').html(data['message']);
                             jQuery('.error-msg').removeClass('hidden');
                             jQuery('.error-msg').addClass('animated fadeIn');
                             function hideMsg() {

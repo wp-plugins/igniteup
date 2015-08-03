@@ -15,7 +15,8 @@
                 <label><?php _e('Enable / Disable', CSCS_TEXT_DOMAIN); ?></label>
             </th>
             <td>
-                <label><input type="checkbox" name="<?php echo $cs_enable_name = CSCS_GENEROPTION_PREFIX . 'enable'; ?>" value="1" <?php check_checkboxes(get_option($cs_enable_name) == '1'); ?>><?php _e('Enable Coming Soon or Site Offline', CSCS_TEXT_DOMAIN); ?></label>
+                <?php $cs_enable_name = CSCS_GENEROPTION_PREFIX . 'enable'; ?>
+                <label><input type="checkbox" name="<?php echo $cs_enable_name; ?>" value="1" <?php check_checkboxes(get_option($cs_enable_name) == '1'); ?>><?php _e('Enable Coming Soon or Site Offline', CSCS_TEXT_DOMAIN); ?></label>
             </td>
         </tr>
         <tr>
@@ -31,28 +32,43 @@
                 <div class="clearfix"></div>
                 <label><input type="checkbox" class="skip_checkbox" value="subscriber" <?php check_checkboxes(in_array('subscriber', $skip_for_array)); ?>><?php _e('Subscribers', CSCS_TEXT_DOMAIN); ?></label>
                 <input type="hidden"  name="<?php echo CSCS_GENEROPTION_PREFIX . 'skipfor'; ?>" id="skip_for_value" value='<?php echo $skipfor; ?>'>
+                <p class="description">Select user roles to skip maintenance mode page.</p>
             </td>
         </tr>
         <tr>
             <th><label><?php _e('Page Title', CSCS_TEXT_DOMAIN); ?></label></th>
             <td>
-                <input type="text" class="regular-text" placeholder="Page Title" name='<?php echo $pg_title_name = CSCS_GENEROPTION_PREFIX . 'cs_page_title'; ?>' value='<?php echo get_option($pg_title_name); ?>'>
+                <?php $pg_title_name = CSCS_GENEROPTION_PREFIX . 'cs_page_title'; ?>
+                <input type="text" class="regular-text" placeholder="Page Title" name='<?php echo $pg_title_name; ?>' value='<?php echo get_option($pg_title_name); ?>'>
                 <p><?php _e('This will be the title of the coming soon page.', CSCS_TEXT_DOMAIN); ?></p>
             </td>
         </tr>
+
         <tr>
-            <th><label><?php _e('Powered by IgniteUp', CSCS_TEXT_DOMAIN); ?></label></th>
+            <th><label><?php _e('Favicon', CSCS_TEXT_DOMAIN); ?></label></th>
             <td>
-                <?php $cs_powered_by = CSCS_GENEROPTION_PREFIX . 'powered_by'; ?>
-                <label><input type="checkbox" name="<?php echo $cs_powered_by; ?>" value="1" <?php check_checkboxes(get_option($cs_powered_by) == '1'); ?>><?php _e('Show "Powered by IgniteUp" in the page', CSCS_TEXT_DOMAIN); ?></label>
+                <div class="uploader">
+                    <?php $favicon_option_name = CSCS_GENEROPTION_PREFIX . 'favicon_url'; ?>
+                    <input id="<?php echo $favicon_option_name; ?>" class="regular-text" name="<?php echo $favicon_option_name; ?>" type="text" value="<?php echo get_option($favicon_option_name, ''); ?>" />
+                    <input id="<?php echo $favicon_option_name; ?>_button" class="button cscs_uploadbutton" data-input="<?php echo $favicon_option_name; ?>" type="submit" value="Upload" />
+                    <p class="description">Recommended size is 16x16 or 32x32. Use only ICO or PNG file.<br>May not be working if your theme or any other plugin is setting a favicon.</p>
+                </div>
             </td>
         </tr>
-
 
         <tr>
             <th><label><?php _e('Custom CSS', CSCS_TEXT_DOMAIN); ?></label></th>
             <td>
                 <textarea name="<?php echo CSCS_GENEROPTION_PREFIX . 'customcss'; ?>" cols="50" rows="7"><?php echo get_option(CSCS_GENEROPTION_PREFIX . 'customcss', ''); ?></textarea>
+                <p class="description">Use custom css to customize front end templates.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <th><label><?php _e('Powered by IgniteUp', CSCS_TEXT_DOMAIN); ?></label></th>
+            <td>
+                <?php $cs_powered_by = CSCS_GENEROPTION_PREFIX . 'powered_by'; ?>
+                <label><input type="checkbox" name="<?php echo $cs_powered_by; ?>" value="1" <?php check_checkboxes(get_option($cs_powered_by) == '1'); ?>><?php _e('Show "Powered by IgniteUp" in the page', CSCS_TEXT_DOMAIN); ?></label>
             </td>
         </tr>
 

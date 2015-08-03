@@ -1,4 +1,5 @@
 <?php
+
 global $cscs_templates;
 $cscs_templates['glass'] = array(
     'name' => 'Glass',
@@ -51,6 +52,12 @@ $cscs_templates['glass'] = array(
             'def' => 'sorry for the inconvenience <br> we will come with a new experience.',
             'placeholder' => 'Paragraph Text',
             'description' => 'This will be the paragraph text, you can use html tags here.',
+        ),
+        'subscribe' => array(
+            'type' => 'checkbox',
+            'label' => 'Show Subscribe Form',
+            'def' => '1',
+            'description' => 'Show/Hide Email Subscribe Form',
         ),
         'social-twitter' => array(
             'type' => 'text',
@@ -115,16 +122,16 @@ $cscs_templates['glass'] = array(
             'placeholder' => 'http://linkedin.com/ceylonsystems',
             'description' => 'Enter the Linkedin URL here',
         ),
-        
     )
 );
 
 function cscs_glass_theme_scripts() {
-    wp_enqueue_style('bootstrap', plugins_url('includes/css/bootstrap.min.css', CSCS_FILE));
-    wp_enqueue_style('font-montserrat', plugins_url('includes/css/font-montserrat.css', CSCS_FILE));
-    wp_enqueue_style('igniteup-fontawesome', plugins_url('includes/css/font-awesome.min.css', CSCS_FILE));
-    wp_enqueue_style('font-opensans', plugins_url('includes/css/font-opensans.css', CSCS_FILE));
-    wp_enqueue_style('igniteup-glass', plugins_url('glass/css/main.css', __FILE__));
+    wp_enqueue_style('bootstrap', plugins_url('includes/css/bootstrap.min.css', CSCS_FILE), array(), CSCS_CURRENT_VERSION);
+    wp_enqueue_style('animate', plugins_url('includes/css/animate.css', CSCS_FILE), array(), CSCS_CURRENT_VERSION);
+    wp_enqueue_style('font-montserrat', plugins_url('includes/css/font-montserrat.css', CSCS_FILE), array(), CSCS_CURRENT_VERSION);
+    wp_enqueue_style('igniteup-fontawesome', plugins_url('includes/css/font-awesome.min.css', CSCS_FILE), array(), CSCS_CURRENT_VERSION);
+    wp_enqueue_style('font-opensans', plugins_url('includes/css/font-opensans.css', CSCS_FILE), array(), CSCS_CURRENT_VERSION);
+    wp_enqueue_style('igniteup-glass', plugins_url('glass/css/main.css', __FILE__), array(), CSCS_CURRENT_VERSION);
 }
 
 add_action('cscs_theme_scripts_glass', 'cscs_glass_theme_scripts');

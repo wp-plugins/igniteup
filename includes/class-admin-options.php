@@ -2,12 +2,16 @@
 
 class CSAdminOptions {
 
-    public static $gener_options = array('enable', 'cs_page_title', 'skipfor', 'powered_by', 'customcss');
+    public static $gener_options = array('enable', 'cs_page_title', 'skipfor', 'powered_by', 'customcss', 'favicon_url');
+    private static $integrat_options = array('mailchimp_api', 'mailchimp_list', 'save_email_to', 'enable_integration', 'mailpoet_list');
 
     public static function registerGeneralOptions() {
         foreach (self::$gener_options as $val) {
             register_setting('cscs_gener_options', CSCS_GENEROPTION_PREFIX . $val);
         }
+
+        foreach (self::$integrat_options as $ival)
+            register_setting('cscs_integrat_options', CSCS_GENEROPTION_PREFIX . $ival);
     }
 
     public static function registerOptions() {
@@ -55,7 +59,21 @@ class CSAdminOptions {
     }
 
     public static function setDefaultOptions() {
-        //add_option(CSCS_GENEROPTION_PREFIX . 'skipfor', json_encode(array('administrator')));
+
+        // set options for showing welcome message.
+        $prev_version = get_option(CSCS_GENEROPTION_PREFIX . 'version', '1.0');
+        $plugin_data = get_plugin_data(CSCS_FILE, false);
+        $plugin_version = floatval($plugin_data['Version']);
+        if ($plugin_version > floatval($prev_version))
+            update_option(CSCS_GENEROPTION_PREFIX . 'show_welcome_notice', 'yes');
+        update_option(CSCS_GENEROPTION_PREFIX . 'version', '' . $plugin_version);
+        //-------------
+    }
+
+    public static function selectOptionIsSelected($saved_val, $current_val) {
+        if ($saved_val == $current_val)
+            return 'selected="selected"';
+        return '';
     }
 
 }

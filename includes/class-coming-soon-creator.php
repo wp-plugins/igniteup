@@ -2,8 +2,8 @@
 
 class CSComingSoonCreator {
 
-    public function __construct($file = NULL) {
-        $this->setConstants($file);
+    public function __construct($file = NULL, $version = NULL) {
+        $this->setConstants($file, $version);
 
         add_action('admin_menu', array($this, 'setMenus'));
         add_action('admin_enqueue_scripts', array($this, 'loadAdminScripts'));
@@ -12,16 +12,19 @@ class CSComingSoonCreator {
         add_action('admin_init', array('CSAdminOptions', 'registerOptions'));
         add_action('admin_init', array('CSAdminOptions', 'registerGeneralOptions'));
         add_action('admin_init', array($this, 'removeSubscribers'));
+        add_action('wp_head', array($this, 'addHeaderStatics'));
         add_action("template_include", array($this, 'myThemeRedirect'));
         add_action('upload_mimes', array($this, 'customMimes'));
         add_action('admin_init', array($this, 'activateTemplate'));
         add_action('admin_init', array($this, 'deleteTemplate'));
+        add_action('admin_init', array($this, 'showWelcomeMessage'));
         add_action('init', array($this, 'makeTemplateOptionsGlobal'));
         register_activation_hook(CSCS_FILE, array('CSAdminOptions', 'setDefaultOptions'));
         add_action('wp_ajax_nopriv_subscribe_email', array($this, 'subscribeEmail'));
         add_action('wp_ajax_subscribe_email', array($this, 'subscribeEmail'));
         add_action('admin_init', array($this, 'createCsvFile'));
         add_action('admin_init', array($this, 'createBccFile'));
+        add_action('admin_bar_menu', array($this, 'showAdminBarMenu'), 1000);
         add_action('after_setup_theme', array($this, 'load_languages'));
         new CSComingSoonDbMigrations();
     }
@@ -33,7 +36,7 @@ class CSComingSoonCreator {
      *
      */
 
-    private function setConstants($file) {
+    private function setConstants($file, $version = NULL) {
         global $wpdb;
         define('CSCS_TEXT_DOMAIN', '_cscs_igniteup');
         define('CSCS_DEFTEMP_OPTION', 'cscs_default_template');
@@ -47,6 +50,9 @@ class CSComingSoonCreator {
 
         if (!empty($file))
             define('CSCS_FILE', $file);
+
+        if (!empty($version))
+            define('CSCS_CURRENT_VERSION', $version);
     }
 
     /*
@@ -57,9 +63,9 @@ class CSComingSoonCreator {
 
     public function setMenus() {
         add_menu_page(__('CS Coming Soon', CSCS_TEXT_DOMAIN), __('IgniteUp', CSCS_TEXT_DOMAIN), 'manage_options', 'cscs_templates', '', '', 39);
-        add_submenu_page('cscs_templates', 'Templates', __('Templates', CSCS_TEXT_DOMAIN), 'manage_options', 'cscs_templates', array('CSAdminOptions', 'templatePage'));
-        add_submenu_page('cscs_templates', 'Subscribers', __('Subscribers', CSCS_TEXT_DOMAIN), 'manage_options', 'cscs_subscribers', array('CSAdminOptions', 'subscribersPage'));
-        add_submenu_page('cscs_templates', 'Options', __('Options', CSCS_TEXT_DOMAIN), 'manage_options', 'cscs_options', array('CSAdminOptions', 'optionsPage'));
+        add_submenu_page('cscs_templates', __('Templates', CSCS_TEXT_DOMAIN), __('Templates', CSCS_TEXT_DOMAIN), 'manage_options', 'cscs_templates', array('CSAdminOptions', 'templatePage'));
+        add_submenu_page('cscs_templates', __('Subscribers', CSCS_TEXT_DOMAIN), __('Subscribers', CSCS_TEXT_DOMAIN), 'manage_options', 'cscs_subscribers', array('CSAdminOptions', 'subscribersPage'));
+        add_submenu_page('cscs_templates', __('Options', CSCS_TEXT_DOMAIN), __('Options', CSCS_TEXT_DOMAIN), 'manage_options', 'cscs_options', array('CSAdminOptions', 'optionsPage'));
     }
 
     private function greenToPublishTheme() {
@@ -73,11 +79,12 @@ class CSComingSoonCreator {
     }
 
     public function loadThemeScripts() {
+        wp_enqueue_style('igniteup-front-compulsory', plugin_dir_url(CSCS_FILE) . 'includes/css/front-compulsory.css', array(), CSCS_CURRENT_VERSION);
         if (!$this->greenToPublishTheme())
             return;
 
         do_action('cscs_theme_scripts_' . CSCS_DEFAULT_TEMPLATE);
-        wp_enqueue_style('igniteup-front', plugin_dir_url(CSCS_FILE) . 'includes/css/front.css');
+        wp_enqueue_style('igniteup-front', plugin_dir_url(CSCS_FILE) . 'includes/css/front.css', array(), CSCS_CURRENT_VERSION);
 
         $custom_css = get_option(CSCS_GENEROPTION_PREFIX . 'customcss', '');
         wp_add_inline_style('igniteup-front', $custom_css);
@@ -114,16 +121,18 @@ class CSComingSoonCreator {
     }
 
     public function loadAdminScripts() {
-        wp_enqueue_style('igniteup', plugin_dir_url(CSCS_FILE) . 'includes/css/main.css', array(), '1.2.1');
-        wp_enqueue_style('wp-color-picker');
-        wp_enqueue_script('jquery');
-        wp_enqueue_script('igniteup', plugin_dir_url(CSCS_FILE) . 'includes/js/main.js', array('jquery', 'wp-color-picker'), '1.2.1', true);
-        wp_enqueue_style('rockyton-icon', plugin_dir_url(CSCS_FILE) . 'includes/css/icons/styles.css');
+        wp_enqueue_style('rockyton-icon', plugin_dir_url(CSCS_FILE) . 'includes/css/icons/styles.css', array(), CSCS_CURRENT_VERSION);
+        wp_enqueue_style('igniteup', plugin_dir_url(CSCS_FILE) . 'includes/css/main.css', array(), CSCS_CURRENT_VERSION);
 
         if (isset($_GET['page']) && $_GET['page'] == 'cscs_options') {
+            wp_enqueue_style('wp-color-picker');
+            wp_enqueue_script('jquery');
+
             wp_enqueue_script('jquery-form', false, array('jquery'));
             wp_enqueue_script('jquery-ui-datepicker');
             wp_enqueue_style('jquery-style', plugin_dir_url(CSCS_FILE) . 'includes/css/jquery-ui.css');
+            wp_enqueue_script('igniteup', plugin_dir_url(CSCS_FILE) . 'includes/js/main.js', array('jquery', 'wp-color-picker'), CSCS_CURRENT_VERSION, true);
+            wp_enqueue_media();
         }
     }
 
@@ -200,9 +209,22 @@ class CSComingSoonCreator {
         return FALSE;
     }
 
+    public function showAdminBarMenu() {
+        if (!$this->checkIfEnabled())
+            return;
+
+        global $wp_admin_bar;
+
+        if (!is_super_admin() || !is_admin_bar_showing())
+            return;
+
+        $wp_admin_bar->add_menu(array('id' => 'igniteup_enabled', 'title' => __('IgniteUp: Enabled', CSCS_TEXT_DOMAIN), 'href' => '#'));
+    }
+
     public function subscribeEmail() {
-        if (!filter_var(($_REQUEST['cs_email']), FILTER_VALIDATE_EMAIL)) {
-            echo json_encode(array('status' => FALSE, 'error' => TRUE, 'message' => 'Invalied email'));
+        $email = trim($_REQUEST['cs_email']);
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            echo json_encode(array('status' => FALSE, 'error' => TRUE, 'message' => '<strong>Invalid email address.</strong> Please enter again.'));
             wp_die();
         }
         $name = '';
@@ -210,9 +232,65 @@ class CSComingSoonCreator {
             $name = $_REQUEST['cs_name'];
 
         global $wpdb;
-        $wpdb->insert(CSCS_DBTABLE_PREFIX . CSCS_DBTABLE_SUBSCRIPTS, array('name' => $name, 'email' => $_REQUEST['cs_email']));
+
+        $wpdb->get_results("SELECT id FROM " . CSCS_DBTABLE_PREFIX . CSCS_DBTABLE_SUBSCRIPTS . " WHERE email = '$email'", 'ARRAY_A');
+        if ($wpdb->num_rows > 0) {
+            echo json_encode(array('status' => FALSE, 'error' => TRUE, 'message' => 'Email address is <strong>already exists</strong>!'));
+            wp_die();
+        }
+
+        $wpdb->insert(CSCS_DBTABLE_PREFIX . CSCS_DBTABLE_SUBSCRIPTS, array('name' => $name, 'email' => $email));
+        $this->subscribeToMailingLists($name, $email);
         echo json_encode(array('status' => TRUE, 'error' => FALSE));
         wp_die();
+    }
+
+    private function subscribeToMailingLists($name, $email) {
+        $enabled = get_option(CSCS_GENEROPTION_PREFIX . 'enable_integration');
+        if ($enabled !== '1')
+            return;
+
+        $cs_name_int_save_to_val = get_option(CSCS_GENEROPTION_PREFIX . 'save_email_to', '');
+
+        switch ($cs_name_int_save_to_val) {
+            case 'mailchimp':
+                $cs_mailchimp_api_key = get_option(CSCS_GENEROPTION_PREFIX . 'mailchimp_api', '');
+                if (empty($cs_mailchimp_api_key))
+                    return;
+
+                $cs_mailchimp_list = get_option(CSCS_GENEROPTION_PREFIX . 'mailchimp_list', '');
+                if (empty($cs_mailchimp_list))
+                    return;
+
+                $MailChimp = new IgniteUpMailChimp($cs_mailchimp_api_key);
+                $return = $MailChimp->call('lists/subscribe', array(
+                    'id' => $cs_mailchimp_list,
+                    'email' => array('email' => $email)
+                ));
+                update_option(CSCS_GENEROPTION_PREFIX . 'integrat_return', serialize($return));
+                break;
+            case 'mailpoet':
+                $cs_mailpet_list_val = get_option(CSCS_GENEROPTION_PREFIX . 'mailpoet_list', '');
+
+                if (empty($cs_mailpet_list_val))
+                    return;
+
+                $user_data = array(
+                    'email' => $email,
+                    'firstname' => $name
+                );
+
+                $data_subscriber = array(
+                    'user' => $user_data,
+                    'user_list' => array('list_ids' => array($cs_mailpet_list_val))
+                );
+
+                $helper_user = WYSIJA::get('user', 'helper');
+                $helper_user->addSubscriber($data_subscriber);
+                break;
+            default:
+                break;
+        }
     }
 
     private function convertToCsv($input_array, $output_file_name, $delimiter) {
@@ -274,6 +352,22 @@ class CSComingSoonCreator {
 
     public function load_languages() {
         load_plugin_textdomain(CSCS_TEXT_DOMAIN, false, dirname(plugin_basename(CSCS_FILE)) . '/localization/');
+    }
+
+    public function showWelcomeMessage() {
+        if (defined('DOING_AJAX') && DOING_AJAX)
+            return;
+        $show_welcome = get_option(CSCS_GENEROPTION_PREFIX . 'show_welcome_notice', 'no');
+        if ($show_welcome == 'yes') {
+            update_option(CSCS_GENEROPTION_PREFIX . 'show_welcome_notice', 'no');
+            wp_redirect(admin_url('admin.php?page=cscs_options&section=help'));
+        }
+    }
+
+    public function addHeaderStatics() {
+        $favicon_url = get_option(CSCS_GENEROPTION_PREFIX . 'favicon_url');
+        if (!empty($favicon_url))
+            echo '<link rel="shortcut icon" href="' . $favicon_url . '" />';
     }
 
 }

@@ -152,7 +152,7 @@ function cscs_launcher_theme_scripts(){
   wp_enqueue_style('bootstrap', plugins_url('includes/css/bootstrap.min.css', CSCS_FILE));  
   wp_enqueue_style('animate', plugins_url('includes/css/animate.css', CSCS_FILE));
   wp_enqueue_style('font-montserrat', plugins_url('includes/css/font-montserrat.css', CSCS_FILE));
-  wp_enqueue_style('launcher', plugins_url('launcher/css/main.css', __FILE__));
+  wp_enqueue_style('launcher', plugins_url('launcher/css/main.css', __FILE__), array(), CSCS_CURRENT_VERSION);
   wp_enqueue_style('launcher-icons', plugins_url('includes/css/icons/styles.css', CSCS_FILE));
   wp_enqueue_script('jquery');
   wp_enqueue_script('jquery-countdown', plugins_url('launcher/js/jquery.countdown.js', __FILE__),  array('jquery'));

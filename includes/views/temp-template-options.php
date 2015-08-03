@@ -1,8 +1,7 @@
 <form action="options.php" method="post" id="igniteup-template-options">
-    <?php settings_fields('cscs_temp_options'); ?>
     <?php
+    settings_fields('cscs_temp_options');
     do_settings_sections('cscs_temp_options');
-    wp_enqueue_media();
     ?>
 
     <table class="form-table">
@@ -43,6 +42,9 @@
                                 break;
                             case 'date':
                                 echo "<input type='text' class='cs-date-picker regular-text reset-supported' id='$option_id' value='$saved_value' name='$option_key' placeholder='" . (isset($field['placeholder']) ? $field['placeholder'] : '' ) . "' data-defval='" . $def_val . "'>";
+                                break;
+                            case 'checkbox':
+                                echo "<label><input type='checkbox' class='reset-supported' id='$option_id' value='1' name='$option_key' data-defval='" . $def_val . "' " . ($saved_value == 1 ? 'checked="checked"' : '' ) . ">" . (isset($field['label']) ? $field['label'] : 'Undefined') . "</label>";
                                 break;
                             case 'textarea':
                                 echo "<textarea  rows='5' cols='46'  class='regular-text reset-supported' id='$option_id' name='$option_key' placeholder='" . (isset($field['placeholder']) ? $field['placeholder'] : '' ) . "' data-defval='" . $def_val . "'>$saved_value</textarea>";
